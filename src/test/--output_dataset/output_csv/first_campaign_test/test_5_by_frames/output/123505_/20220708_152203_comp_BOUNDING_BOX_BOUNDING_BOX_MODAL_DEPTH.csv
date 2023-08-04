@@ -1,0 +1,3 @@
+;time_capture;fruit_id;lab.tree;lab.fruit_label;lab.depth_mm;lab.caliber_mm;lab.height_mm;lab.weight_gr;lab.observations;pred.obj_detection;pred.measure_c_px;pred.measure_h_px;pred.depth_mm;pred.caliber_mm;pred.height_mm;pred.mass_gr;caliber_abs_dif;caliber_mape_abs_dif;caliber_sqr_dif;caliber_sqr_mean_dif
+0;12:35:05;BALL_060;1;BALL_060;1446.0;60.00;60.00;108.00;;17;42;42;1372;55.41;55.41;96.06;4.59;0.08;21.09;900.00
+1;12:35:05;BALL_120;1;BALL_120;1427.0;120.00;120.00;409.00;;18;91;86;1353;118.39;111.88;389.65;1.61;0.01;2.60;900.00

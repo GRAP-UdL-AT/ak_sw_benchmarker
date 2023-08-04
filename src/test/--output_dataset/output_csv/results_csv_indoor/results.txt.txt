@@ -1,0 +1,13 @@
+Saving data in file C:\Users\Usuari\PycharmProjects\SizeEstimation\test\output_dataset\output_csv\20220816_080118_comparative_by_day_2.csv -->
+CALIBER -->
+total_objects-> 9
+sum predicted =697.9421141270609
+mean predicted =77.54912379189565
+sum measured =720.0
+mean measured =80.0
+MSE = 9.517744260449636
+MAE = 2.5449012572671483 mm.
+RMSE = 3.08508415775804
+MAPE = 0.02895924606247241
+R2=0.9865527338002624
+------------------------------->

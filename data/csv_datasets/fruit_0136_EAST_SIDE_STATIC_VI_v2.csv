@@ -1,0 +1,5 @@
+lab.tree;lab.fruit_label;fruit_id;lab.depth_mm;lab.o_caliber_mm;lab.o_height_mm;lab.caliber_mm;lab.height_mm;lab.mass_gr;lab.observations;lab.occluded
+2;129;2129;0.0;75.87;69.79;75.87;69.79;194.5;;NO
+2;136;2136;0.0;66.27;59.62;66.27;59.62;128.1;;NO
+1;BALL_060;BALL_060;1446.0;60.0;60.0;60.0;60.0;108.0;;NO
+1;BALL_120;BALL_120;1427.0;120.0;120.0;120.0;120.0;409.0;;NO

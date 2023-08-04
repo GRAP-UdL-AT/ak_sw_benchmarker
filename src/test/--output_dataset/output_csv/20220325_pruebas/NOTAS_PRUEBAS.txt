@@ -1,0 +1,59 @@
+PRUEBA 1.
+-----------------------------------
+KINECT_V2, MASK, ELLIPSE. AVERAGE, CALIBER
+dATASET -> SELECTED_fruit_measures_v4
+
+CALIBER -->
+total_objects-> 12
+sum predicted =963.0714386652083
+mean predicted =80.2559532221007
+sum measured =948.9
+mean measured =79.075
+MSE =25.949804118387135
+MAE =3.782487838414576 mm.
+RMSE =5.094095024475607
+MAPE =0.05226612819108157 %
+R2=0.9314500151771681
+------------------------------->
+
+
+
+PRUEBA 2.
+-----------------------------------
+KINECT_V2, MASK, ELLIPSE. AVERAGE, MASA, last_model
+dATASET -> SELECTED_fruit_measures_v5
+
+
+MASS -->
+total_objects-> 8
+sum predicted =1551.1493375067867
+mean predicted =193.89366718834833
+sum measured =1424.2
+mean measured =178.025
+MSE =653.6168415233758
+MAE =19.637463696190657 gr.
+RMSE =25.565931266499483
+MAPE =0.10927875568613016 %
+R2=0.40265151870098703
+------------------------------->
+
+------------------------------->
+
+PRUEBA 3.
+-----------------------------------
+KINECT_V2, MASK, CIRCLE. AVERAGE, MASA, last_model
+dATASET -> SELECTED_fruit_measures_v5
+
+
+MASS -->
+total_objects-> 8
+sum predicted =1923.4494302951452
+mean predicted =240.43117878689316
+sum measured =1424.2
+mean measured =178.025
+MSE =4928.389814334481
+MAE =62.406178786893136 gr.
+RMSE =70.20249151087503
+MAPE =0.34137774685729527 %
+R2=-3.5041161485079932
+------------------------------->
