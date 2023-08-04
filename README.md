@@ -11,7 +11,6 @@ graphical interfaces and provide reports that can subsequently be used by other 
 that offers field acquisition tools focused on the [Azure Kinect DK sensor](https://docs.microsoft.com/en/azure/kinect-dk/). Table 1-2 shows the links to the other
 developed tools.
 
-XXX
 |                           |
 |---------------------------|
 | ![SOFTWARE_FAMILY](https://github.com/GRAP-UdL-AT/ak_simulator/blob/main/docs/img/ak_fruitdata_family.png?raw=true) |
