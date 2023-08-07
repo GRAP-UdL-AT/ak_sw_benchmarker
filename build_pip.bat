@@ -10,7 +10,7 @@ REM  Author: Juan Carlos Miranda. https://github.com/juancarlosmiranda/
 SET APPLICATION_FOLDER_MAIN=ak_simulator
 SET APPLICATION_FOLDER_OUT=ak_simulator_f
 SET APPLICATION_PATH=%~dp0
-SET VERSION=0.0.7
+SET VERSION=0.0.8
 
 SET CONF_NAME=*.conf
 SET PATH_FOLDER_RELATIVE_CONF=src\%APPLICATION_FOLDER_MAIN%\conf\

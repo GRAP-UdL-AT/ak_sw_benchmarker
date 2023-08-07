@@ -88,7 +88,7 @@ pip install --upgrade pip
 
 ** for Windows 10 is python.exe -m pip install --upgrade pip **
 
-#pip install python -m ak-simulator  #
+# pip install python -m ak-simulator
 pip install --index-url https://test.pypi.org/simple/ --extra-index-url https://pypi.org/simple ak_simulator
 python -m ak_simulator
 ```
@@ -210,9 +210,8 @@ pip install package.whl
 python -m ak_simulator
 ```
 
-
 After the execution of the script, a new folder will be generated inside the project **"/dist"**. You can copy **
-ak_size_weight_sim_f/** or a compressed file **"ak_frame_Extractor_f.zip"** to distribute.
+ak_simulator_f/** or a compressed file **"ak_simulator_f.zip"** to distribute.
 
 ### 5.6 Package distribution format
 
