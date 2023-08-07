@@ -89,7 +89,7 @@ source ./ak_simulator_venv/bin/activate
 pip install --upgrade pip
 
 pip install python -m ak-simulator
-python -m ak-simulator
+python -m ak_simulator
 ```
 
 Download image dataset example from [HERE](https://github.com/GRAP-UdL-AT/ak_simulator/) and groundtruth data of labelled apples from [HERE](https://github.com/GRAP-UdL-AT/ak_simulator/)
