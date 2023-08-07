@@ -37,7 +37,7 @@ Python based GUI tool for fruit size estimation and weight prediction. It receiv
 explained by [Miranda et al., 2022](https://doi.org/10.1016/j.softx.2022.101231) and a ground truth file to display
 various fruit measurements. ak-size-estimation is part of the AKFruitdata family (Fig 2.), a suite that offers field
 acquisition tools focused on the Azure Kinect DK sensor. Table 1 shows the links to the other developed tools. This is
-the Github repository of **ak-simulator**, an installable version can be found published on Pypi.org at the following
+the Github repository of **ak-simulator**, an installable version can be found published on [Pypi.org](https://pypi.org/search/?q=ak_simulator) at the following
 link [https://pypi.org/project/ak-simulator/](https://test.pypi.org/project/ak-simulator/0.0.1/)
 
 |                           |
