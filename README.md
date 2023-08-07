@@ -136,7 +136,7 @@ Folder description:
 |---------------------------|-------------------------|
 | [docs/](https://github.com/GRAP-UdL-AT/ak_simulator/tree/main/docs) | Documentation |
 | [src/](https://github.com/GRAP-UdL-AT/ak_simulator/tree/main/src) | Source code |
-| [data/](https://github.com/GRAP-UdL-AT/ak_simulator/tree/main/data) | Examples of output produced by AK_FRAEX, data extracted from recorded video. |
+| [data/](https://github.com/GRAP-UdL-AT/ak_simulator/tree/main/data) | Dataset with images and the file with apples groundtruth. |
 | . | . |
 
 Python environment files:
