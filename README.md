@@ -46,8 +46,6 @@ link [https://pypi.org/project/ak-simulator/](https://test.pypi.org/project/ak-s
 | Fig. 2. AK_SIMULATOR module user interface. a) 'Dataset metrics' tab to select data (frames) and configure the sizing and yield prediction algorithms. b) 'Metric comparisons' tab to report results and error statistics.|
 
 
-
-
 ## Contents
 
 1. Pre-requisites.
@@ -67,7 +65,7 @@ link [https://pypi.org/project/ak-simulator/](https://test.pypi.org/project/ak-s
 * Videos recorded with the Azure Kinect camera, optional video samples are available at [AK_FRAEX - Azure Kinect Frame Extractor demo videos](https://doi.org/10.5281/zenodo.6968103)
 
 
-## 2. Functionalities (AFTER PAPER)
+## 2. Functionalities
 
 The functionalities of the software are briefly described. Supplementary material can be
 found in [USER's Manual](https://github.com/juancarlosmiranda/ak_size_weight_sim/blob/main/docs/USER_MANUAL_ak_size_weight_sim_v1.md).
