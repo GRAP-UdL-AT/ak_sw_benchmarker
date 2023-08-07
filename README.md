@@ -95,7 +95,7 @@ pip install --index-url https://test.pypi.org/simple/ --extra-index-url https://
 python -m ak_simulator
 ```
 
-Download the dataset with images and the file with groundtruth from [https://github.com/GRAP-UdL-AT/ak_simulator/blob/main/data/](https://github.com/GRAP-UdL-AT/ak_simulator/) and groundtruth data of labelled apples from [HERE](https://github.com/GRAP-UdL-AT/ak_simulator/blob/main/data/data.zip).
+Download the dataset with images and the file with apples groundtruth from [https://github.com/GRAP-UdL-AT/ak_simulator/blob/main/data/](https://github.com/GRAP-UdL-AT/ak_simulator/) and groundtruth data of labelled apples from [HERE](https://github.com/GRAP-UdL-AT/ak_simulator/blob/main/data/data.zip).
 
 
 ### 3.2 Install and run virtual environments using scripts provided
