@@ -1,28 +1,41 @@
-Testing package
----------------------
-twine upload --repository testpypi ./dist/*
-https://test.pypi.org/project/ak-size-estimation/1.1.1/
-pip install -i https://test.pypi.org/simple/ ak-size-estimation==0.0.1
-pip install -i https://test.pypi.org/simple/ ak-size-estimation==0.0.2
-pip install -i https://test.pypi.org/simple/ ak-size-estimation==1.1.1
-
 Environment creation
 -----------------------
 python -m venv testing_package_venv
 pip install --upgrade pip
 
+Testing package
+---------------------
+twine upload --repository testpypi ./dist/*
+https://test.pypi.org/project/ak-size-estimation/1.1.1/
+pip install -i https://test.pypi.org/simple/ ak-simulator
+
+
 Local installation
 ------------------
-pip install ak_size_weight_sim-1.1.2-py3-none-any.whl
-pip install ak_size_weight_sim-1.1.2-py3-none-any.whl --force-reinstall
+pip install ak_simulator-0.0.7-py3-none-any.whl
+pip install ak_simulator-0.0.7-py3-none-any.whl --force-reinstall
 
 Execution
 ------------------
-python -m ak_size_weight_sim
-python -m ak-size-weight-sim
+python -m ak_simulator
 
-Maquina virtual
+
+Installation in virtual machine
 --------------------
 sudo apt install python3-pip
 pip install tk
 sudo apt install python3-tk
+
+
+Dealing with dependency conflicts
+-----------------------------------
+https://pip.pypa.io/en/latest/topics/dependency-resolution/#dealing-with-dependency-conflicts
+
+
+Problems with dependences
+--------------------------
+https://stackoverflow.com/questions/57405014/how-to-fix-no-matching-distribution-found-for-package-name-when-installing-o
+https://packaging.python.org/en/latest/guides/using-testpypi/
+
+
+pip install --index-url https://test.pypi.org/simple/ --extra-index-url https://pypi.org/simple ak_simulator

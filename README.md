@@ -90,7 +90,8 @@ pip install --upgrade pip
 
 ** for Windows 10 is python.exe -m pip install --upgrade pip **
 
-pip install python -m ak-simulator
+#pip install python -m ak-simulator  #
+pip install --index-url https://test.pypi.org/simple/ --extra-index-url https://pypi.org/simple ak_simulator
 python -m ak_simulator
 ```
 

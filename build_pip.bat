@@ -10,6 +10,7 @@ REM  Author: Juan Carlos Miranda. https://github.com/juancarlosmiranda/
 SET APPLICATION_FOLDER_MAIN=ak_simulator
 SET APPLICATION_FOLDER_OUT=ak_simulator_f
 SET APPLICATION_PATH=%~dp0
+SET VERSION=0.0.7
 
 SET CONF_NAME=*.conf
 SET PATH_FOLDER_RELATIVE_CONF=src\%APPLICATION_FOLDER_MAIN%\conf\
@@ -33,6 +34,7 @@ ECHO %DESTINATION_FOLDER_ABSOLUTE_CONF%
 ECHO %PATH_ASSETS_FILE%
 ECHO %DESTINATION_FOLDER_ABSOLUTE_ASSETS%
 
-ECHO 'pip package is OK -- /dist/ak_simulator_package-0.0.1-py3-none-any.whl'
-ECHO 'UPLOAD FOR TEST PACKAGE USING - twine upload --repository testpypi ./dist/*'
 py -m build
+
+ECHO 'pip package is OK -- /dist/ak_simulator_package-'%VERSION%'-py3-none-any.whl'
+ECHO 'UPLOAD FOR TEST PACKAGE USING - twine upload --repository testpypi ./dist/*'
