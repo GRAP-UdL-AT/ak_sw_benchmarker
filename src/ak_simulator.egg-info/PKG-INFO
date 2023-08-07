@@ -1,3 +1,18 @@
+Metadata-Version: 2.1
+Name: ak-simulator
+Version: 0.0.8
+Summary: AK_SIMULATOR that makes it possible to apply different sizing algorithms and allometric yield prediction models to manually labeled color and depth tree images.
+Home-page: https://github.com/GRAP-UdL-AT/ak_simulator
+Author: Juan Carlos Miranda, Jaume Arno, Jordi Gene-Mola, Spyros Fountas, Eduard Gregorio
+Author-email: juancarlos.miranda@udl.cat, jaume.arno@udl.cat, jordi.genemola@udl.cat, sfountas@aua.gr, eduard.gregorio@udl.cat
+Project-URL: Bug Tracker, https://github.com/GRAP-UdL-AT/ak_simulator/issues
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.8
+Description-Content-Type: text/markdown
+License-File: LICENSE
+
 # AKFruitYield: AK_SIMULATOR - Azure Kinect Size Estimation & Weight Prediction Simulator
 
 AKFruitYield is a modular software that allows orchard data from RGB-D Azure Kinect cameras to be processed for fruit
@@ -88,7 +103,8 @@ pip install --upgrade pip
 
 ** for Windows 10 is python.exe -m pip install --upgrade pip **
 
-pip install python -m ak-simulator
+# pip install python -m ak-simulator
+pip install --index-url https://test.pypi.org/simple/ --extra-index-url https://pypi.org/simple ak_simulator
 python -m ak_simulator
 ```
 

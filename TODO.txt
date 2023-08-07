@@ -10,6 +10,10 @@ https://test.pypi.org/project/ak-size-estimation/1.1.1/
 pip install -i https://test.pypi.org/simple/ ak-simulator
 
 
+twine upload ./dist/* --verbose
+pip install ak-simulator
+
+
 Local installation
 ------------------
 pip install ak_simulator-0.0.7-py3-none-any.whl
