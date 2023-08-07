@@ -211,7 +211,6 @@ python -m ak_simulator
 ```
 
 
-
 After the execution of the script, a new folder will be generated inside the project **"/dist"**. You can copy **
 ak_size_weight_sim_f/** or a compressed file **"ak_frame_Extractor_f.zip"** to distribute.
 
