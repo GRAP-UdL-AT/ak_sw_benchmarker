@@ -204,10 +204,10 @@ build_pip.bat
 pip install package.whl
 ```
 
-### 5.3.3 Run ak_size_weight_sim
+### 5.3.3 Run ak_simulator
 
 ```
-python -m ak_size_weight_sim.py
+python -m ak_simulator
 ```
 
 
