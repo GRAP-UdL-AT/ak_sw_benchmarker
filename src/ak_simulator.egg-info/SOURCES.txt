@@ -4,13 +4,14 @@ pyproject.toml
 setup.cfg
 src/ak_simulator/__init__.py
 src/ak_simulator/__main__.py
+src/ak_simulator/temporal.py
 src/ak_simulator.egg-info/PKG-INFO
 src/ak_simulator.egg-info/SOURCES.txt
 src/ak_simulator.egg-info/dependency_links.txt
 src/ak_simulator.egg-info/requires.txt
 src/ak_simulator.egg-info/top_level.txt
-src/ak_simulator/conf/ui_simulation_settings.conf
-src/ak_simulator/conf/ui_simulation_settings_all_test.conf
+src/ak_simulator/ak_simulator/conf/ui_simulation_settings.conf
+src/ak_simulator/ak_simulator/conf/ui_simulation_settings_all_test.conf
 src/camera_management_s/__init__.py
 src/camera_management_s/camera_parameters.py
 src/camera_management_s/camera_parameters_selector.py
