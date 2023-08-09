@@ -1,3 +1,6 @@
+https://test.pypi.org/project/ak-simulator/
+
+
 Environment creation
 -----------------------
 python -m venv testing_package_venv
@@ -6,10 +9,11 @@ pip install --upgrade pip
 Testing package
 ---------------------
 twine upload --repository testpypi ./dist/*
-https://test.pypi.org/project/ak-size-estimation/1.1.1/
 pip install -i https://test.pypi.org/simple/ ak-simulator
 
 
+Final repository
+---------------------
 twine upload ./dist/* --verbose
 pip install ak-simulator
 
