@@ -27,6 +27,7 @@ if __name__ == '__main__':
 
     current_main_path_str = __file__
     package_path = os.path.dirname(os.path.normpath(current_main_path_str))
+    # ------------
     package_path_config_files = os.path.join(package_path, 'conf')
     path_user_config_files = os.path.join(BASE_DIR, 'conf')
     path_user_input_folder = os.path.join(BASE_DIR, 'input_folder')
