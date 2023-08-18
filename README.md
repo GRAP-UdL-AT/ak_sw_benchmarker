@@ -68,7 +68,7 @@ link [https://pypi.org/project/ak-simulator/](https://pypi.org/project/ak-simula
 ## 2. Functionalities
 
 The functionalities of the software are briefly described. Supplementary material can be
-found in [USER's Manual](https://github.com/juancarlosmiranda/ak_size_weight_sim/blob/main/docs/USER_MANUAL_ak_size_weight_sim_v1.md).
+found in [USER's Manual](https://github.com/juancarlosmiranda/ak_size_weight_sim/blob/main/docs/USER_MANUAL_ak_simulator_v1.md).
 
 * **Analyse dataset** allows simulation to be performed with a final report of size estimates and weight prediction. The user has the option of introducing a file with values of real dimensions of fruits (ground truth) to compare with the set of images that it is desired to be analyzed. A final report with results (size and weight) grouped by image and fruit will be presented according to the selected parameters in addition to the test metrics.
 * **Export images** makes it possible to visualize the geometric fitting of the ROIs on the objects (fruits) to be measured. Outputs are color images including binary masks of selected objects and fruit labeling. This functionality adds value to the software since the user can observe how sizing algorithms are applied to the images, enabling corrective adjustments in the algorithm configuration if necessary.
