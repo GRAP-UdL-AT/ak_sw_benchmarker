@@ -61,6 +61,7 @@ if __name__ == '__main__':
     ui_simulation_config = GUISimulationConfig(ui_path_config_file)
     ui_simulation_config.input_folder = path_user_input_folder
     ui_simulation_config.output_folder = path_user_output_folder
+    # -------------------------
     app = GUIAKTabWindow(ui_simulation_config)
     app.mainloop()
     # -------------------------

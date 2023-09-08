@@ -150,7 +150,7 @@ class DrawScreenManager:
     # ----------------
     # object labels data
     # ----------------
-    RECT_TH = 1 #2
+    RECT_TH = 1  # 2
     FONT_SIZE = 0.8  # font size 2 * scale=0.4
     FONT_TYPE = cv2.FONT_ITALIC
     TEXT_TH = 2
@@ -375,8 +375,7 @@ class DrawScreenManager:
             # --------------------------------
 
             message_to_draw = f'{n}) {pv_label_list[n]},r={round(radius)}'
-            cv2.putText(img_to_draw, message_to_draw, (xmin, ymin), self.FONT_TYPE, self.FONT_SIZE, selected_color,
-                        thickness=self.TEXT_TH)
+            cv2.putText(img_to_draw, message_to_draw, (xmin, ymin), self.FONT_TYPE, self.FONT_SIZE, selected_color, thickness=self.TEXT_TH)
 
         return img_to_draw
 
@@ -517,7 +516,7 @@ class DrawScreenManager:
                 elif size_option.name == SizeEstimationSelectorPx.EF.name:
                     # print('ELLIPSE')
                     # ------------------------------
-                    (x, y), (ma, MA), angle = cv2.fitEllipse(cnt)  # obtains values
+                    (x, y), (ma, MA), angle = cv2.fitEllipse(cnt)  # obtains values  # TODO: 08/09/2023 error detected on 172533
                     # print(f'n){n} {pv_label_list[n]} x={x}, y={y} major_axis={MA} minor_axis={ma} angle={angle}')
                     perp_angle = angle + 90
                     # apply an offset to show in frame image
@@ -553,7 +552,7 @@ class DrawScreenManager:
                 # -----------------------------
                 # -----------------------------
                 elif size_option.name == SizeEstimationSelectorPx.RR.name:
-                    print('ROTATE_RECTANGLE')
+                    # print('ROTATE_RECTANGLE')
                     rect = cv2.minAreaRect(cnt)
                     box = cv2.boxPoints(rect)
                     box = np.intp(box)
@@ -574,7 +573,7 @@ class DrawScreenManager:
                     img_to_draw = self.draw_points_frame(cnt, img_to_draw, xmin, ymin)
                 # -----------------------------
                 elif size_option.name == SizeEstimationSelectorPx.CE.name:
-                    print('CIRCLE_ENCLOSING')
+                    # print('CIRCLE_ENCLOSING')
                     (x, y), radius = cv2.minEnclosingCircle(cnt)
                     print(f'){n} {pv_label_list[n]} x={x}, y={y} radius={radius}')
                     # apply an offset to show in frame image
@@ -597,7 +596,7 @@ class DrawScreenManager:
                     img_to_draw = self.draw_points_frame(cnt, img_to_draw, xmin, ymin)
                 # -----------------------------
                 elif size_option.name == SizeEstimationSelectorPx.CF.name:
-                    print('CIRCLE_FITTING')
+                    # print('CIRCLE_FITTING')
                     obj_shape = ShapeFittingMethods(cnt)
                     (x, y), radius = obj_shape.minFittingCircle()  # my function least squares
 
@@ -661,19 +660,18 @@ class DrawScreenManager:
             pv_labelled_list, pv_label_list = PascalVocParser.readXMLFromFile(a_pv_file_path)  # load data to memory
             # ----------------------------------------------------
             # IMAGE PROCESSING HERE
-            imp = ImageProcessing()
-            ip_1 = imp.im_method_1(mask_frame)
+            imp = ImageProcessing()  # todo: 24/08/2023 for debugging
+            ip_1 = imp.im_method_1(mask_frame)  # todo: 24/08/2023 for debugging
             # ----------------------------------------------------
             # by each frame get objects
             # todo: put here a parameter
-            drawn_image = self.draw_figure_by_parameter(rgb_frame, ip_1, pv_labelled_list, pv_label_list, size_option,
-                                                        selected_fruits_list, print_label_option)
-            drawn_mask = self.draw_figure_by_parameter(mask_frame_draw, ip_1, pv_labelled_list, pv_label_list,
-                                                       size_option, selected_fruits_list, print_label_option)
+            drawn_image = self.draw_figure_by_parameter(rgb_frame, ip_1, pv_labelled_list, pv_label_list, size_option, selected_fruits_list, print_label_option)
+            #todo: 24/08/2023 for debugging
+            drawn_mask = self.draw_figure_by_parameter(mask_frame_draw, ip_1, pv_labelled_list, pv_label_list, size_option, selected_fruits_list, print_label_option)
             #
             cv2.imwrite(os.path.join(path_to_save_df, img_filename + '_l' + '.png'), drawn_image)
-            cv2.imwrite(os.path.join(path_to_save_df, img_filename + '_m' + '.png'), drawn_mask)
-            cv2.imwrite(os.path.join(path_to_save_df, img_filename + '_ip' + '.png'), ip_1)
+            cv2.imwrite(os.path.join(path_to_save_df, img_filename + '_m' + '.png'), drawn_mask) # todo: 24/08/2023 for debugging
+            #cv2.imwrite(os.path.join(path_to_save_df, img_filename + '_ip' + '.png'), ip_1) # todo: 24/08/2023 for debugging
 
     # ----------------------- PREDICTION ------------------------
 
