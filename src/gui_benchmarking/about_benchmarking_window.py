@@ -1,5 +1,5 @@
 """
-Project: ak_simulator Azure Kinect Size Estimation https://github.com/juancarlosmiranda/ak_size_weight_sim/
+Project: ak_sw_benchmarker Azure Kinect Size Estimation https://github.com/juancarlosmiranda/ak_size_weight_sim/
 
 * PAgFRUIT http://www.pagfruit.udl.cat/en/
 * GRAP http://www.grap.udl.cat/
@@ -13,19 +13,18 @@ Use:
 import os
 import tkinter as tk
 import webbrowser
-from gui_simulation.gui_simulation_config import GUISimulationConfig
+# from gui_benchmarking.gui_simulation_config import GUISimulationConfig
 
 
 class AboutSimulationWindow(tk.Toplevel):
     author_str = 'Juan Carlos Miranda'
     author_site_str = 'https://github.com/juancarlosmiranda'
-    title_str = 'Azure Kinect Size Estimation & Weight Prediction Simulator \n(ak_simulator)'
+    title_str = 'Azure Kinect Size Estimation & \n Weight Prediction Benchmarker \n(ak_sw_benchmarker)'
     version_number_str = '1.0'
     release_date = 'February 2022'
 
     def __init__(self, parent):
         super().__init__(parent)
-        # self.geometry(GUISimulationConfig.geometry_about)
         self.title('About...')
         self.resizable(width=False, height=False)  # do not change the size
         self.attributes('-topmost', True)
@@ -89,10 +88,9 @@ class AboutSimulationWindow(tk.Toplevel):
         # img_label_02.pack()
         # -----------------------
 
-        buttonClose = tk.Button(self, text='Close', command=self.destroy)
-        buttonClose.pack(expand=True)
+        button_close = tk.Button(self, text='Close', command=self.destroy)
+        button_close.pack(expand=True)
         pass
-
 
     def callback(self, url):
         webbrowser.open_new_tab(url)

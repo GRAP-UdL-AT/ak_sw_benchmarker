@@ -7,7 +7,7 @@ REM  * GRAP http://www.grap.udl.cat/
 REM
 REM  Author: Juan Carlos Miranda. https://github.com/juancarlosmiranda/
 
-set VIRTUAL_ENV=%HOMEDRIVE%%HOMEPATH%\development_env\ak_simulator_venv
+set VIRTUAL_ENV=%HOMEDRIVE%%HOMEPATH%\development_env\ak_sw_benchmarker_venv
 
 rem This file is UTF-8 encoded, so we need to update the current code page while executing it
 for /f "tokens=2 delims=:." %%a in ('"%SystemRoot%\System32\chcp.com"') do (
@@ -40,4 +40,4 @@ if defined _OLD_CODEPAGE (
     set _OLD_CODEPAGE=
 )
 
-python ak_simulator_main.py
+python ak_sw_benchmarker_main.py

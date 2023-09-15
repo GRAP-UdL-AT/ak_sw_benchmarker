@@ -15,13 +15,13 @@ Use:
 import os
 import tkinter as tk
 import webbrowser
-from gui_simulation.gui_simulation_config import GUISimulationConfig
+from gui_benchmarking.gui_benchmarking_config import GUISimulationConfig
 
 
 class HelpSimulationWindow(tk.Toplevel):
     author_str = 'Juan Carlos Miranda'
     author_site_str = 'https://github.com/juancarlosmiranda'
-    title_str = 'Azure Kinect Size Estimation & Weight Prediction Simulator \n(ak_simulator)'
+    title_str = 'Azure Kinect Size Estimation & \n Weight Prediction Benchmarker \n(ak_sw_benchmarker)'
     version_number_str = '1.0'
     release_date = 'February 2022'
 
@@ -51,7 +51,7 @@ class HelpSimulationWindow(tk.Toplevel):
         link = tk.Label(self, text="User manual here", font=('Helveticabold', 15), fg="blue", cursor="hand2")
         link.pack()
         link.bind("<Button-1>", lambda e:
-        self.callback("https://github.com/GRAP-UdL-AT/ak_simulator/"))
+        self.callback("https://github.com/GRAP-UdL-AT/ak_sm_benchmarker/"))
 
         buttonClose = tk.Button(self, text='Close', command=self.destroy)
         buttonClose.pack(expand=True)

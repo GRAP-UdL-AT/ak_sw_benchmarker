@@ -1,5 +1,5 @@
 """
-Project: ak_simulator Azure Kinect Size Estimation https://github.com/juancarlosmiranda/ak_size_weight_sim/
+Project: ak_sw_benchmarker Azure Kinect Size Estimation https://github.com/juancarlosmiranda/ak_size_weight_sim/
 
 * PAgFRUIT http://www.pagfruit.udl.cat/en/
 * GRAP http://www.grap.udl.cat/
@@ -14,8 +14,8 @@ Use:
 import os
 from os.path import expanduser
 from helpers.helper_filesystem import copy_folder
-from gui_simulation.gui_simulation_config import GUISimulationConfig
-from gui_simulation.gui_tab_window import GUIAKTabWindow
+from gui_benchmarking.gui_benchmarking_config import GUISimulationConfig
+from gui_benchmarking.gui_tab_window import GUIAKTabWindow
 # without src.
 
 if __name__ == '__main__':
@@ -25,14 +25,14 @@ if __name__ == '__main__':
     base_path = os.path.join(user_path)
 
     current_main_path_str = __file__
-    package_path = os.path.join(os.path.dirname(os.path.normpath(current_main_path_str)), 'ak_simulator')
+    package_path = os.path.join(os.path.dirname(os.path.normpath(current_main_path_str)), 'ak_sw_benchmarker')
     # ------------
     package_path_config_files = os.path.join(package_path, 'conf')
-    ui_path_config_file = os.path.join(package_path, 'ui_simulation_settings.conf')
+    ui_path_config_file = os.path.join(package_path, 'ui_benchmarking_settings.conf')
 
     # ------------
     # in the current folder of execution
-    root_folder = os.path.join(BASE_DIR, 'ak_simulator')  #
+    root_folder = os.path.join(BASE_DIR, 'ak_sw_benchmarker')  #
     path_user_config_files = os.path.join(root_folder, 'conf')
     path_user_input_folder = os.path.join(root_folder, 'input_folder')
     path_user_output_folder = os.path.join(root_folder, 'output_dataset')

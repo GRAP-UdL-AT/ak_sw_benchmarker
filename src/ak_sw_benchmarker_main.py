@@ -4,13 +4,13 @@ import sys
 sys.path.append(os.path.join(os.path.abspath('.'), 'src'))
 
 from helpers.helper_filesystem import copy_folder
-from gui_simulation.gui_simulation_config import GUISimulationConfig
-from gui_simulation.gui_tab_window import GUIAKTabWindow
+from gui_benchmarking.gui_benchmarking_config import GUISimulationConfig
+from gui_benchmarking.gui_tab_window import GUIAKTabWindow
 # without src.
 
 if __name__ == '__main__':
-    BASE_DIR = os.path.join(os.path.abspath('.'), 'ak_simulator')
-    path_config_file = os.path.join(BASE_DIR, 'conf', 'ui_simulation_settings.conf')
+    BASE_DIR = os.path.join(os.path.abspath('.'), 'ak_sw_benchmarker')
+    path_config_file = os.path.join(BASE_DIR, 'conf', 'ui_benchmarking_settings.conf')
 
     user_path = expanduser("~")
     base_path = os.path.join(user_path)

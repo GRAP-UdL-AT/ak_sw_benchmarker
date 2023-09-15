@@ -8,7 +8,7 @@
 
 set -e
 
-FILENAME_ZIP='ak_size_weight_sim-main.zip'
+FILENAME_ZIP='ak_sw_benchmarker-main.zip'
 REQUERIMENTS_LINUX='requirements_linux.txt'
 
 # commands definitions
@@ -30,7 +30,7 @@ COMMON_ENV_PATH='bin/activate'
 
 
 # software folders names
-SIZE_ESTIMATION_NAME='ak_size_weight_sim-main'
+SIZE_ESTIMATION_NAME='ak_sw_benchmarker-main'
 
 
 # project folders

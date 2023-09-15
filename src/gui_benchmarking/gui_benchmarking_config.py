@@ -13,7 +13,7 @@ import configparser
 
 
 class GUISimulationConfig:
-    app_title = 'ak_simulator'
+    app_title = 'ak_sw_benchmarker'
     width = 320
     height = 480
     geometry_about = '300x480'

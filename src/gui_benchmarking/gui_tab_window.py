@@ -1,5 +1,5 @@
 """
-Project: ak_simulator Azure Kinect Size Estimation https://github.com/juancarlosmiranda/ak_size_weight_sim/
+Project: ak_sw_benchmarker Azure Kinect Size Estimation https://github.com/juancarlosmiranda/ak_size_weight_sim/
 
 * PAgFRUIT http://www.pagfruit.udl.cat/en/
 * GRAP http://www.grap.udl.cat/
@@ -18,8 +18,8 @@ from tkinter import filedialog
 from tkinter import Frame, LabelFrame, Label, Menu, Entry, Button, Spinbox, Text
 from tkinter import ttk
 
-from gui_simulation.about_simulation_window import AboutSimulationWindow
-from gui_simulation.help_simulation_window import HelpSimulationWindow
+from gui_benchmarking.about_benchmarking_window import AboutSimulationWindow
+from gui_benchmarking.help_benchmarking_window import HelpSimulationWindow
 
 from dataset_management.dataset_config import DatasetConfig
 from dataset_management.dataset_manager import DatasetManager
@@ -40,7 +40,7 @@ from reports_management.prediction_metrics_framework import PredictionsMetricsFr
 from reports_management.prediction_metrics_framework import PredictionMetricsFramework
 from screen_layout_s.draw_screen_helpers import DrawScreenManager
 
-from gui_simulation.gui_simulation_config import GUISimulationConfig
+from gui_benchmarking.gui_benchmarking_config import GUISimulationConfig
 
 from reports_management.integration_datasheet_metrics import IntegrationDatasheetMetrics
 from reports_management.integration_detail_metrics import IntegrationDetailMetrics

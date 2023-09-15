@@ -8,7 +8,7 @@ if defined _OLD_CODEPAGE (
     "%SystemRoot%\System32\chcp.com" 65001 > nul
 )
 
-SET APPLICATION_FOLDER_MAIN=ak_simulator
+SET APPLICATION_FOLDER_MAIN=ak_sw_benchmarker
 SET ENV_NAME=_venv
 SET APPLICATION_FOLDER_VENV=%APPLICATION_FOLDER_MAIN%%ENV_NAME%
 SET DEVELOPMENT_ENV_PATH=development_env

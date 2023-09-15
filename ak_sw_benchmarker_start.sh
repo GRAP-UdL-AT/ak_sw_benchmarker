@@ -26,7 +26,7 @@ COMMON_ENV_PATH='bin/activate'
 
 
 # software folders names
-SIZE_ESTIMATION_NAME='ak_simulator'
+SIZE_ESTIMATION_NAME='ak_sw_benchmarker'
 
 
 # project folders
@@ -41,5 +41,5 @@ SIZE_ESTIMATION_NAME_ENV_F=$ROOT_ENV_F$SIZE_ESTIMATION_NAME$ENV_NAME/
 # activating environments
 source $SIZE_ESTIMATION_NAME_ENV_F$COMMON_ENV_PATH
 
-python ak_size_weight_sim_main.py
+python ak_sw_benchmarker_main.py
 deactivate
