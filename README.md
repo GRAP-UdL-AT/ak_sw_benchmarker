@@ -1,4 +1,4 @@
-# AKFruitYield: AK_SW_BENCHMARKER - Azure Kinect Size Estimation & Weight Prediction Benchmarker & Weight Prediction Simulator
+# AKFruitYield: AK_SW_BENCHMARKER - Azure Kinect Size Estimation & Weight Prediction Benchmarker
 
 AKFruitYield is a modular software that allows orchard data from RGB-D Azure Kinect cameras to be processed for fruit
 size and fruit yield estimation. Specifically, two modules have been developed: i) [AK_SW_BENCHMARKER](https://github.com/GRAP-UdL-AT/ak_sw_benchmarker/) that makes it possible
@@ -26,7 +26,7 @@ developed tools.
 
 | Package                   | Description            |
 |---------------------------|-------------------------|
-| ak_sw_benchmarker - Azure Kinect Size Estimation & Weight Prediction Benchmarker & Weight Prediction Simulator ([https://github.com/GRAP-UdL-AT/ak_sw_benchmarker/](https://github.com/GRAP-UdL-AT/ak_sw_benchmarker/)) | Python based GUI tool for fruit size estimation and weight prediction. |
+| AK_SW_BENCHMARKER - Azure Kinect Size Estimation & Weight Prediction Benchmarker & Weight Prediction Simulator ([https://github.com/GRAP-UdL-AT/ak_sw_benchmarker/](https://github.com/GRAP-UdL-AT/ak_sw_benchmarker/)) | Python based GUI tool for fruit size estimation and weight prediction. |
 | AK_VIDEO_ANALYSER - Azure Kinect Video Analyser ([https://github.com/GRAP-UdL-AT/ak_video_analyser/](https://github.com/GRAP-UdL-AT/ak_video_analyser/)) | Python based GUI tool for fruit size estimation and weight prediction from videos. |
 | Table 2. | Modules developed under the AKFruitYield family |
 
