@@ -1,5 +1,5 @@
 """
-Project: Size Estimation
+Project: ak_sw_benchmarker Azure Kinect Size Estimation & Weight Prediction Benchmarker https://github.com/GRAP-UdL-AT/ak_sw_benchmarker/
 Author: Juan Carlos Miranda. https://github.com/juancarlosmiranda
 Date: February 2022
 Description:
@@ -7,6 +7,7 @@ Description:
 
 Use:
     python -m unittest mass_estimation/test/test_suite_mass_estimation.py
+    todo: header
 """
 
 import unittest

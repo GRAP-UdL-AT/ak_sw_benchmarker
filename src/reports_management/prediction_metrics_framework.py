@@ -1,5 +1,5 @@
 """
-Project: ak_sw_benchmarker Azure Kinect Size Estimation https://github.com/juancarlosmiranda/ak_size_weight_sim/
+Project: ak_sw_benchmarker Azure Kinect Size Estimation & Weight Prediction Benchmarker https://github.com/GRAP-UdL-AT/ak_sw_benchmarker/
 
 * PAgFRUIT http://www.pagfruit.udl.cat/en/
 * GRAP http://www.grap.udl.cat/
@@ -7,7 +7,7 @@ Project: ak_sw_benchmarker Azure Kinect Size Estimation https://github.com/juanc
 Author: Juan Carlos Miranda. https://github.com/juancarlosmiranda/
 Date: February 2022
 Description:
-    Configuration of simulation user interface
+    Configuration of benchmarking user interface
     Read images, depth and IR from a dataset, extract labelled data and print metrics.
 
 Use:
@@ -209,13 +209,13 @@ class PredictionMetricsFramework:
             print('DEFAULT -->')
             self.a_report.print_weight_metrics()
 
-    def export_csv_results(self, export_path_simulations):
+    def export_csv_results(self, export_path_benchmarking):
         print(type(self).__name__)
         print('SAVING WITH SELECTED NAME BY USER')
-        print(f'Saving data in file {export_path_simulations} -->')
+        print(f'Saving data in file {export_path_benchmarking} -->')
         self.a_report.export_data_csv(self.conf.path_day_measures)
 
-    def get_simulation_results(self):
+    def get_benchmarking_results(self):
         results_metrics = None
 
         if self.conf.comparative_report_option == ComparativeMeasuresReportSelector.DEPTH:

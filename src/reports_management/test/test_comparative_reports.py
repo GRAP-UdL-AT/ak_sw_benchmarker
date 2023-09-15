@@ -1,8 +1,8 @@
 """
-# Project: Fruit Size Estimation
-# Author: Juan Carlos Miranda
-# Date: February 2022
-# Description:
+Project: ak_sw_benchmarker Azure Kinect Size Estimation & Weight Prediction Benchmarker https://github.com/GRAP-UdL-AT/ak_sw_benchmarker/
+Author: Juan Carlos Miranda
+Date: February 2022
+Description:
   Test for methods used to check automatic metrics against a data calculated by a system.
   This assumes an example datasheet and obtains metrics from a fixed method
   The columns pred.caliber_mm, pred.height_mm, pred.mass_gr contains known dummy values to check metrics procedures

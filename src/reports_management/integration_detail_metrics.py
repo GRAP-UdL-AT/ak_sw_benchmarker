@@ -1,5 +1,5 @@
 """
-Project: ak_sw_benchmarker Azure Kinect Size Estimation https://github.com/juancarlosmiranda/ak_size_weight_sim/
+Project: ak_sw_benchmarker Azure Kinect Size Estimation & Weight Prediction Benchmarker https://github.com/GRAP-UdL-AT/ak_sw_benchmarker/
 
 * PAgFRUIT http://www.pagfruit.udl.cat/en/
 * GRAP http://www.grap.udl.cat/
@@ -12,8 +12,8 @@ Description:
         # TODO: these test are implemented in class integration_detail_metrics.py. This is an integration test
             replace test saved in ./method_all
 Use:
-        integrations_detail_tests = IntegrationDetailMetrics(datetime_experiment, camera_option, comparative_report_option, dataset_manager_config, self.path_manual_measures_entry.get(), path_output_simulation)
-        integrations_detail_tests.test_run_simulation_masks()
+        integrations_detail_tests = IntegrationDetailMetrics(datetime_experiment, camera_option, comparative_report_option, dataset_manager_config, self.path_manual_measures_entry.get(), path_output_benchmarking)
+        integrations_detail_tests.test_run_benchmarking_masks()
 
 """
 import os
@@ -31,15 +31,15 @@ from reports_management.prediction_metrics_framework import PredictionMetricsFra
 
 class IntegrationDetailMetrics:
     def __init__(self, datetime_experiment_str, camera_option, comparative_report_option,
-                 dataset_manager_config: DatasetConfig, path_manual_measures_entry, path_output_simulation):
+                 dataset_manager_config: DatasetConfig, path_manual_measures_entry, path_output_benchmarking):
 
-        self.path_output_simulation = os.path.join(path_output_simulation)
-        self.path_output_plots = os.path.join(self.path_output_simulation, 'plots')
+        self.path_output_benchmarking = os.path.join(path_output_benchmarking)
+        self.path_output_plots = os.path.join(self.path_output_benchmarking, 'plots')
 
         self.datetime_experiment = datetime_experiment_str
         self.base_filename = 'comp_'
         self.extension_csv = '.csv'
-        self.path_output_csv = os.path.join(self.path_output_simulation, 'output_csv')
+        self.path_output_csv = os.path.join(self.path_output_benchmarking, 'output_csv')
 
         # --------------------------------------
         # LABORATORY MEASURES
@@ -516,7 +516,7 @@ class IntegrationDetailMetrics:
 
     def run_comparative(self):
         """
-        Here are grouped all methods to run simulation
+        Here are grouped all methods to run benchmarking
         :return:
         """
         data_features_options = DataFeatureConfig(camera_conf=self.camera_option.rgb_sensor,
@@ -538,13 +538,13 @@ class IntegrationDetailMetrics:
         elif self.roi_selector.name == ROISelector.MASK.name:
             simulator_metrics.comparative_metrics_dataset_mask(self.measures_selected_df)
         # -----------------------------
-        results_simulation_metrics = simulator_metrics.get_simulation_results()
+        results_benchmarking_metrics = simulator_metrics.get_benchmarking_results()
         print(
             f'{self.camera_option.__name__()}, {self.comparative_report_option.name},{self.roi_selector.name}, {self.size_estimation_selector.name}')
-        results_simulation_metrics.print_metrics()
+        results_benchmarking_metrics.print_metrics()
         simulator_metrics.export_csv_results(self.path_day_measures)
 
-    def test_run_simulation_masks(self):
+    def test_run_benchmarking_masks(self):
         """
         output_data/
         | --- \ reports_by_frame

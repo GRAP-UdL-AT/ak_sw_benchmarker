@@ -1,5 +1,5 @@
 """
-Project: ak_sw_benchmarker Azure Kinect Size Estimation https://github.com/juancarlosmiranda/ak_size_weight_sim/
+Project: ak_sw_benchmarker Azure Kinect Size Estimation & Weight Prediction Benchmarker https://github.com/GRAP-UdL-AT/ak_sw_benchmarker/
 
 * PAgFRUIT http://www.pagfruit.udl.cat/en/
 * GRAP http://www.grap.udl.cat/
@@ -13,8 +13,8 @@ Description:
     All combinations of test must be updated here
 
 Use:
-        integrations_tests = IntegrationDatasheetMetrics(datetime_experiment, camera_option, comparative_report_option, dataset_manager_config, self.path_manual_measures_entry.get(), path_output_simulation)
-        integrations_tests.test_run_simulation()
+        integrations_tests = IntegrationDatasheetMetrics(datetime_experiment, camera_option, comparative_report_option, dataset_manager_config, self.path_manual_measures_entry.get(), path_output_benchmarking)
+        integrations_tests.test_run_benchmarking()
 """
 import os
 import pandas as pd
@@ -32,14 +32,14 @@ from reports_management.prediction_metrics_framework import PredictionMetricsFra
 
 class IntegrationDatasheetMetrics:
     def __init__(self, datetime_experiment_str, camera_option, comparative_report_option,
-                 dataset_manager_config: DatasetConfig, path_manual_measures_entry, path_output_simulation):
+                 dataset_manager_config: DatasetConfig, path_manual_measures_entry, path_output_benchmarking):
 
-        self.path_output_simulation = os.path.join(path_output_simulation)
-        self.path_output_plots = os.path.join(self.path_output_simulation, 'plots')
+        self.path_output_benchmarking = os.path.join(path_output_benchmarking)
+        self.path_output_plots = os.path.join(self.path_output_benchmarking, 'plots')
 
         self.datetime_experiment = datetime_experiment_str
         self.day_measures_filename = self.datetime_experiment + 'comparative_by_day_all.csv'
-        self.path_output_csv = os.path.join(self.path_output_simulation, 'output_csv')
+        self.path_output_csv = os.path.join(self.path_output_benchmarking, 'output_csv')
         self.path_day_measures = os.path.join(self.path_output_csv, self.day_measures_filename)
         self.comparative_report_option = comparative_report_option
         # --------------
@@ -92,19 +92,19 @@ class IntegrationDatasheetMetrics:
                                                                   self.comparative_report_option)
 
         # -----------------------------
-        simulation = PredictionMetricsFramework(self.simulator_config)
+        benchmarking = PredictionMetricsFramework(self.simulator_config)
         # -----------------------------
         if self.roi_selector.name == ROISelector.BBOX.name:
-            simulation.comparative_metrics_dataset_bbox(self.measures_selected_df)
+            benchmarking.comparative_metrics_dataset_bbox(self.measures_selected_df)
         elif self.roi_selector.name == ROISelector.MASK.name:
-            simulation.comparative_metrics_dataset_mask(self.measures_selected_df)
+            benchmarking.comparative_metrics_dataset_mask(self.measures_selected_df)
 
         # ----------------------
         # TODO: 28/07/2022 REVIEW THIS IS REPEATED
-        # r = simulation.get_simulation_results()
+        # r = benchmarking.get_benchmarking_results()
         # ----------------------
 
-        r = simulation.get_simulation_results()
+        r = benchmarking.get_benchmarking_results()
         # ----------------------
         temporal_record = pd.DataFrame(
             [[self.camera_option.__name__(),
@@ -128,35 +128,35 @@ class IntegrationDatasheetMetrics:
 
     # all combinations of test must be updated here
 
-    def mask_simulation_method_1(self):
+    def mask_benchmarking_method_1(self):
         self.roi_selector = ROISelector.MASK
         self.size_estimation_selector = SizeEstimationSelectorPx.EF
         self.depth_option = DepthSelector.AVG
         #self.mass_estimation_option = MassEstimationModelSelector.NONE
         self.run_optimization_metrics()
 
-    def mask_simulation_method_2(self):
+    def mask_benchmarking_method_2(self):
         self.roi_selector = ROISelector.MASK
         self.size_estimation_selector = SizeEstimationSelectorPx.EF
         self.depth_option = DepthSelector.MOD
         #self.mass_estimation_option = MassEstimationModelSelector.NONE
         self.run_optimization_metrics()
 
-    def mask_simulation_method_3(self):
+    def mask_benchmarking_method_3(self):
         self.roi_selector = ROISelector.MASK
         self.size_estimation_selector = SizeEstimationSelectorPx.EF
         self.depth_option = DepthSelector.MIN
         #self.mass_estimation_option = MassEstimationModelSelector.NONE
         self.run_optimization_metrics()
 
-    def mask_simulation_method_4(self):
+    def mask_benchmarking_method_4(self):
         self.roi_selector = ROISelector.MASK
         self.size_estimation_selector = SizeEstimationSelectorPx.EF
         self.depth_option = DepthSelector.MAX
         # self.mass_estimation_option = MassEstimationModelSelector.NONE
         self.run_optimization_metrics()
 
-    def mask_simulation_method_5(self):
+    def mask_benchmarking_method_5(self):
         # TODO: 02/04/2022 disable CENTROID calculations for MASK
         self.roi_selector = ROISelector.MASK
         self.size_estimation_selector = SizeEstimationSelectorPx.EF
@@ -164,35 +164,35 @@ class IntegrationDatasheetMetrics:
         #self.mass_estimation_option = MassEstimationModelSelector.NONE
         self.run_optimization_metrics()
 
-    def mask_simulation_method_6(self):
+    def mask_benchmarking_method_6(self):
         self.roi_selector = ROISelector.MASK
         self.size_estimation_selector = SizeEstimationSelectorPx.CE
         self.depth_option = DepthSelector.AVG
         # self.mass_estimation_option = MassEstimationModelSelector.NONE
         self.run_optimization_metrics()
 
-    def mask_simulation_method_7(self):
+    def mask_benchmarking_method_7(self):
         self.roi_selector = ROISelector.MASK
         self.size_estimation_selector = SizeEstimationSelectorPx.CE
         self.depth_option = DepthSelector.MOD
         # self.mass_estimation_option = MassEstimationModelSelector.NONE
         self.run_optimization_metrics()
 
-    def mask_simulation_method_8(self):
+    def mask_benchmarking_method_8(self):
         self.roi_selector = ROISelector.MASK
         self.size_estimation_selector = SizeEstimationSelectorPx.CE
         self.depth_option = DepthSelector.MIN
         # self.mass_estimation_option = MassEstimationModelSelector.NONE
         self.run_optimization_metrics()
 
-    def mask_simulation_method_9(self):
+    def mask_benchmarking_method_9(self):
         self.roi_selector = ROISelector.MASK
         self.size_estimation_selector = SizeEstimationSelectorPx.CE
         self.depth_option = DepthSelector.MAX
         # self.mass_estimation_option = MassEstimationModelSelector.NONE
         self.run_optimization_metrics()
 
-    def mask_simulation_method_10(self):
+    def mask_benchmarking_method_10(self):
         # TODO: 02/04/2022 disable CENTROID calculations for MASK
         self.roi_selector = ROISelector.MASK
         self.size_estimation_selector = SizeEstimationSelectorPx.CE
@@ -201,35 +201,35 @@ class IntegrationDatasheetMetrics:
         self.run_optimization_metrics()
 
     # --------------------------------------
-    def mask_simulation_method_11(self):
+    def mask_benchmarking_method_11(self):
         self.roi_selector = ROISelector.MASK
         self.size_estimation_selector = SizeEstimationSelectorPx.CF
         self.depth_option = DepthSelector.AVG
         # self.mass_estimation_option = MassEstimationModelSelector.NONE
         self.run_optimization_metrics()
 
-    def mask_simulation_method_12(self):
+    def mask_benchmarking_method_12(self):
         self.roi_selector = ROISelector.MASK
         self.size_estimation_selector = SizeEstimationSelectorPx.CF
         self.depth_option = DepthSelector.MOD
         # self.mass_estimation_option = MassEstimationModelSelector.NONE
         self.run_optimization_metrics()
 
-    def mask_simulation_method_13(self):
+    def mask_benchmarking_method_13(self):
         self.roi_selector = ROISelector.MASK
         self.size_estimation_selector = SizeEstimationSelectorPx.CF
         self.depth_option = DepthSelector.MIN
         # self.mass_estimation_option = MassEstimationModelSelector.NONE
         self.run_optimization_metrics()
 
-    def mask_simulation_method_14(self):
+    def mask_benchmarking_method_14(self):
         self.roi_selector = ROISelector.MASK
         self.size_estimation_selector = SizeEstimationSelectorPx.CF
         self.depth_option = DepthSelector.MAX
         # self.mass_estimation_option = MassEstimationModelSelector.NONE
         self.run_optimization_metrics()
 
-    def mask_simulation_method_15(self):
+    def mask_benchmarking_method_15(self):
         # TODO: 02/04/2022 disable CENTROID calculations for MASK
         self.roi_selector = ROISelector.MASK
         self.size_estimation_selector = SizeEstimationSelectorPx.CF
@@ -238,35 +238,35 @@ class IntegrationDatasheetMetrics:
         self.run_optimization_metrics()
 
     # --------------------------------------
-    def mask_simulation_method_16(self):
+    def mask_benchmarking_method_16(self):
         self.roi_selector = ROISelector.MASK
         self.size_estimation_selector = SizeEstimationSelectorPx.RR
         self.depth_option = DepthSelector.AVG
         # self.mass_estimation_option = MassEstimationModelSelector.NONE
         self.run_optimization_metrics()
 
-    def mask_simulation_method_17(self):
+    def mask_benchmarking_method_17(self):
         self.roi_selector = ROISelector.MASK
         self.size_estimation_selector = SizeEstimationSelectorPx.RR
         self.depth_option = DepthSelector.MOD
         # self.mass_estimation_option = MassEstimationModelSelector.NONE
         self.run_optimization_metrics()
 
-    def mask_simulation_method_18(self):
+    def mask_benchmarking_method_18(self):
         self.roi_selector = ROISelector.MASK
         self.size_estimation_selector = SizeEstimationSelectorPx.RR
         self.depth_option = DepthSelector.MIN
         # self.mass_estimation_option = MassEstimationModelSelector.NONE
         self.run_optimization_metrics()
 
-    def mask_simulation_method_19(self):
+    def mask_benchmarking_method_19(self):
         self.roi_selector = ROISelector.MASK
         self.size_estimation_selector = SizeEstimationSelectorPx.RR
         self.depth_option = DepthSelector.MAX
         # self.mass_estimation_option = MassEstimationModelSelector.NONE
         self.run_optimization_metrics()
 
-    def mask_simulation_method_20(self):
+    def mask_benchmarking_method_20(self):
         # TODO: 02/04/2022 disable CENTROID calculations for MASK
         self.roi_selector = ROISelector.MASK
         self.size_estimation_selector = SizeEstimationSelectorPx.RR
@@ -274,52 +274,52 @@ class IntegrationDatasheetMetrics:
         # self.mass_estimation_option = MassEstimationModelSelector.NONE
         self.run_optimization_metrics()
 
-    def bbox_simulation_method_1(self):
+    def bbox_benchmarking_method_1(self):
         self.roi_selector = ROISelector.BBOX
         self.size_estimation_selector = SizeEstimationSelectorPx.BB
         self.depth_option = DepthSelector.AVG
         # self.mass_estimation_option = MassEstimationModelSelector.NONE
         self.run_optimization_metrics()
 
-    def bbox_simulation_method_2(self):
+    def bbox_benchmarking_method_2(self):
         self.roi_selector = ROISelector.BBOX
         self.size_estimation_selector = SizeEstimationSelectorPx.BB
         self.depth_option = DepthSelector.MOD
         # self.mass_estimation_option = MassEstimationModelSelector.NONE
         self.run_optimization_metrics()
 
-    def bbox_simulation_method_3(self):
+    def bbox_benchmarking_method_3(self):
         self.roi_selector = ROISelector.BBOX
         self.size_estimation_selector = SizeEstimationSelectorPx.BB
         self.depth_option = DepthSelector.MIN
         # self.mass_estimation_option = MassEstimationModelSelector.NONE
         self.run_optimization_metrics()
 
-    def bbox_simulation_method_4(self):
+    def bbox_benchmarking_method_4(self):
         self.roi_selector = ROISelector.BBOX
         self.size_estimation_selector = SizeEstimationSelectorPx.BB
         self.depth_option = DepthSelector.MAX
         # self.mass_estimation_option = MassEstimationModelSelector.NONE
         self.run_optimization_metrics()
 
-    def bbox_simulation_method_5(self):
+    def bbox_benchmarking_method_5(self):
         self.roi_selector = ROISelector.BBOX
         self.size_estimation_selector = SizeEstimationSelectorPx.BB
         self.depth_option = DepthSelector.CENTROID
         # self.mass_estimation_option = MassEstimationModelSelector.NONE
         self.run_optimization_metrics()
 
-#    def test_run_simulation(self):
-#        print(f'test_run_simulation(self): -->{self.comparative_report_option}')
+#    def test_run_benchmarking(self):
+#        print(f'test_run_benchmarking(self): -->{self.comparative_report_option}')
 #        if self.comparative_report_option == ComparativeMeasuresReportSelector.MASS:
 #            print('MASS')
-#            self.test_run_simulation_mass()
+#            self.test_run_benchmarking_mass()
 #        else:
-#            self.test_run_simulation_diameters()
+#            self.test_run_benchmarking_diameters()
 #        pass
 
 
-    def test_run_simulation_diameters(self):
+    def test_run_benchmarking_diameters(self):
         """
             This contains all methods
             :return:
@@ -327,39 +327,39 @@ class IntegrationDatasheetMetrics:
         # self.comparative_report_option = ComparativeMeasuresReportSelector.CALIBER
         # ------------------------
         # ELLIPSE FITTING
-        self.mask_simulation_method_1()
-        self.mask_simulation_method_2()
-        self.mask_simulation_method_3()
-        # self.mask_simulation_method_4()
-        # self.mask_simulation_method_5()
+        self.mask_benchmarking_method_1()
+        self.mask_benchmarking_method_2()
+        self.mask_benchmarking_method_3()
+        # self.mask_benchmarking_method_4()
+        # self.mask_benchmarking_method_5()
         # # ------------------------
         # # CIRCLE ENCLOSING
-        self.mask_simulation_method_6()
-        self.mask_simulation_method_7()
-        self.mask_simulation_method_8()
-        # self.mask_simulation_method_9()
-        # self.mask_simulation_method_10()
+        self.mask_benchmarking_method_6()
+        self.mask_benchmarking_method_7()
+        self.mask_benchmarking_method_8()
+        # self.mask_benchmarking_method_9()
+        # self.mask_benchmarking_method_10()
         # # ------------------------
         # # CIRCLE FITTING
-        self.mask_simulation_method_11()
-        self.mask_simulation_method_12()
-        self.mask_simulation_method_13()
-        # self.mask_simulation_method_14()
-        # self.mask_simulation_method_15()
+        self.mask_benchmarking_method_11()
+        self.mask_benchmarking_method_12()
+        self.mask_benchmarking_method_13()
+        # self.mask_benchmarking_method_14()
+        # self.mask_benchmarking_method_15()
         # # ------------------------
         # # ROTATE RECTANGLE
-        self.mask_simulation_method_16()
-        self.mask_simulation_method_17()
-        self.mask_simulation_method_18()
-        # self.mask_simulation_method_19()
-        # self.mask_simulation_method_20()
+        self.mask_benchmarking_method_16()
+        self.mask_benchmarking_method_17()
+        self.mask_benchmarking_method_18()
+        # self.mask_benchmarking_method_19()
+        # self.mask_benchmarking_method_20()
         # # ------------------------
         # # BOUNDING BOX
-        self.bbox_simulation_method_1()
-        self.bbox_simulation_method_2()
-        self.bbox_simulation_method_3()
-        # self.bbox_simulation_method_4()
-        # self.bbox_simulation_method_5()
+        self.bbox_benchmarking_method_1()
+        self.bbox_benchmarking_method_2()
+        self.bbox_benchmarking_method_3()
+        # self.bbox_benchmarking_method_4()
+        # self.bbox_benchmarking_method_5()
         # ------------------------
         # save final result
         self.optimization_results_df.to_csv(self.path_optimization, float_format='%.3f', sep=';')  # 03/10/2022 modified decimals from .2f to .3f
@@ -367,30 +367,30 @@ class IntegrationDatasheetMetrics:
         # ------------------------
         pass
 
-    def test_run_simulation_weight(self):
+    def test_run_benchmarking_weight(self):
         """
-            This contains all methods AND RUN SIMULATION FOR WEIGHT
+            This contains all methods AND RUN benchmarking FOR WEIGHT
             :return:
         """
         self.weight_prediction_option = WeightPredictionModelSelector.D1D2_LM_MET_01
-        self.test_run_simulation_diameters()
+        self.test_run_benchmarking_diameters()
 
         self.weight_prediction_option = WeightPredictionModelSelector.D1D2_LM_MET_02
-        self.test_run_simulation_diameters()
+        self.test_run_benchmarking_diameters()
 
         self.weight_prediction_option = WeightPredictionModelSelector.D1D2_LM_MET_03
-        self.test_run_simulation_diameters()
+        self.test_run_benchmarking_diameters()
 
         self.weight_prediction_option = WeightPredictionModelSelector.D1D2_LM_MET_04
-        self.test_run_simulation_diameters()
+        self.test_run_benchmarking_diameters()
 
         self.weight_prediction_option = WeightPredictionModelSelector.D1D2_LM_MET_05
-        self.test_run_simulation_diameters()
+        self.test_run_benchmarking_diameters()
 
         self.weight_prediction_option = WeightPredictionModelSelector.D1D2_NLM_MET_01
-        self.test_run_simulation_diameters()
+        self.test_run_benchmarking_diameters()
 
         self.weight_prediction_option = WeightPredictionModelSelector.D1D2_NLM_MET_02
-        self.test_run_simulation_diameters()
+        self.test_run_benchmarking_diameters()
 
         pass

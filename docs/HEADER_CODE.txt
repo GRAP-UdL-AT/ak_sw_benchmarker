@@ -12,7 +12,7 @@ Use:
 # TEMPLATE PROJECT
 
 """
-Project: ak-size-estimation Azure Kinect Size Estimation https://github.com/juancarlosmiranda/ak_size_weight_sim/
+Project: ak_sw_benchmarker Azure Kinect Size Estimation & Weight Prediction Benchmarker https://github.com/GRAP-UdL-AT/ak_sw_benchmarker/
 
 * PAgFRUIT http://www.pagfruit.udl.cat/en/
 * GRAP http://www.grap.udl.cat/
@@ -26,7 +26,7 @@ Use:
 
 
 # HEADER FOR BASH SCRIPTS
-# Project: ak-size-estimation Azure Kinect Size Estimation https://github.com/juancarlosmiranda/ak_size_weight_sim/
+# Project: ak_sw_benchmarker Azure Kinect Size Estimation & Weight Prediction Benchmarker https://github.com/GRAP-UdL-AT/ak_sw_benchmarker/
 #
 # * PAgFRUIT http://www.pagfruit.udl.cat/en/
 # * GRAP http://www.grap.udl.cat/
@@ -36,7 +36,7 @@ Use:
 
 
 REM HEADER FOR WINDOW SYSTEMS
-REM Project: ak-size-estimation Azure Kinect Size Estimation https://github.com/juancarlosmiranda/ak_size_weight_sim/
+REM Project: ak_sw_benchmarker Azure Kinect Size Estimation & Weight Prediction Benchmarker https://github.com/GRAP-UdL-AT/ak_sw_benchmarker/
 REM 
 REM  * PAgFRUIT http://www.pagfruit.udl.cat/en/
 REM  * GRAP http://www.grap.udl.cat/
@@ -46,7 +46,7 @@ REM  Author: Juan Carlos Miranda. https://github.com/juancarlosmiranda/
 
 % MATLAB HEADERS
 %
-% Project: ak-size-estimation Azure Kinect Size Estimation https://github.com/juancarlosmiranda/ak_size_weight_sim/
+% Project: ak_sw_benchmarker Azure Kinect Size Estimation & Weight Prediction Benchmarker https://github.com/GRAP-UdL-AT/ak_sw_benchmarker/
 %
 % * PAgFRUIT http://www.pagfruit.udl.cat/en/
 % * GRAP http://www.grap.udl.cat/

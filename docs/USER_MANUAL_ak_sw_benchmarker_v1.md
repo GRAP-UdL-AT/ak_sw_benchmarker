@@ -1,4 +1,4 @@
-# ak-size-weight-sim - User's Manual
+# ak_sw_benchmarker - User's Manual
 Tool for extracting frames from video files produced with Azure Kinect cameras.
 
 * [GRAP-UdL-AT/ak_frame_extractor](https://github.com/GRAP-UdL-AT/ak_frame_extractor)

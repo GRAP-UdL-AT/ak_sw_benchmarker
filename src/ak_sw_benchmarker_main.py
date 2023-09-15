@@ -1,10 +1,11 @@
+# todo: add header
 import os
 from os.path import expanduser
 import sys
 sys.path.append(os.path.join(os.path.abspath('.'), 'src'))
 
 from helpers.helper_filesystem import copy_folder
-from gui_benchmarking.gui_benchmarking_config import GUISimulationConfig
+from gui_benchmarking.gui_benchmarking_config import GUIBenchmarkingConfig
 from gui_benchmarking.gui_tab_window import GUIAKTabWindow
 # without src.
 
@@ -54,9 +55,9 @@ if __name__ == '__main__':
         # ---------------------
         copy_folder(package_path_config_files, path_user_config_files)
     # -------------------------
-    ui_simulation_config = GUISimulationConfig(path_config_file)
-    ui_simulation_config.input_folder = path_user_input_folder
-    ui_simulation_config.output_folder = path_user_output_folder
-    app = GUIAKTabWindow(ui_simulation_config)
+    ui_benchmarking_config = GUIBenchmarkingConfig(path_config_file)
+    ui_benchmarking_config.input_folder = path_user_input_folder
+    ui_benchmarking_config.output_folder = path_user_output_folder
+    app = GUIAKTabWindow(ui_benchmarking_config)
     app.mainloop()
     # -------------------------

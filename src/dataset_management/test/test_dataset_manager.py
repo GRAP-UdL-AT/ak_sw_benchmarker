@@ -1,9 +1,9 @@
 """
-Project: Fruit Size Estimation
+Project: ak_sw_benchmarker Azure Kinect Size Estimation & Weight Prediction Benchmarker https://github.com/GRAP-UdL-AT/ak_sw_benchmarker/
 Author: Juan Carlos Miranda. https://github.com/juancarlosmiranda
 Date: February 2022
 Description:
-    Configuration of simulation user interface
+    Configuration of benchmarking user interface
 
 Use:
 

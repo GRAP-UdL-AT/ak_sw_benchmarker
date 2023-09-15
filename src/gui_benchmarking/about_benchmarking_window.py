@@ -1,5 +1,5 @@
 """
-Project: ak_sw_benchmarker Azure Kinect Size Estimation https://github.com/juancarlosmiranda/ak_size_weight_sim/
+Project: ak_sw_benchmarker Azure Kinect Size Estimation & Weight Prediction Benchmarker https://github.com/GRAP-UdL-AT/ak_sw_benchmarker/
 
 * PAgFRUIT http://www.pagfruit.udl.cat/en/
 * GRAP http://www.grap.udl.cat/
@@ -13,10 +13,10 @@ Use:
 import os
 import tkinter as tk
 import webbrowser
-# from gui_benchmarking.gui_simulation_config import GUISimulationConfig
+# from gui_benchmarking.gui_benchmarking_config import GUIbenchmarkingConfig
 
 
-class AboutSimulationWindow(tk.Toplevel):
+class AboutBenchmarkingWindow(tk.Toplevel):
     author_str = 'Juan Carlos Miranda'
     author_site_str = 'https://github.com/juancarlosmiranda'
     title_str = 'Azure Kinect Size Estimation & \n Weight Prediction Benchmarker \n(ak_sw_benchmarker)'

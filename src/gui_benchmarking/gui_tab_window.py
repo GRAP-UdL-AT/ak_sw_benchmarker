@@ -1,5 +1,5 @@
 """
-Project: ak_sw_benchmarker Azure Kinect Size Estimation https://github.com/juancarlosmiranda/ak_size_weight_sim/
+Project: ak_sw_benchmarker Azure Kinect Size Estimation & Weight Prediction Benchmarker https://github.com/GRAP-UdL-AT/ak_sw_benchmarker/
 
 * PAgFRUIT http://www.pagfruit.udl.cat/en/
 * GRAP http://www.grap.udl.cat/
@@ -7,7 +7,7 @@ Project: ak_sw_benchmarker Azure Kinect Size Estimation https://github.com/juanc
 Author: Juan Carlos Miranda. https://github.com/juancarlosmiranda/
 Date: November 2021
 Description:
-    Simulation user interface. This GUI contains parameters to run experiments
+    benchmarking user interface. This GUI contains parameters to run experiments
 Use:
 """
 import os
@@ -18,8 +18,8 @@ from tkinter import filedialog
 from tkinter import Frame, LabelFrame, Label, Menu, Entry, Button, Spinbox, Text
 from tkinter import ttk
 
-from gui_benchmarking.about_benchmarking_window import AboutSimulationWindow
-from gui_benchmarking.help_benchmarking_window import HelpSimulationWindow
+from gui_benchmarking.about_benchmarking_window import AboutBenchmarkingWindow
+from gui_benchmarking.help_benchmarking_window import HelpBenchmarkingWindow
 
 from dataset_management.dataset_config import DatasetConfig
 from dataset_management.dataset_manager import DatasetManager
@@ -40,7 +40,7 @@ from reports_management.prediction_metrics_framework import PredictionsMetricsFr
 from reports_management.prediction_metrics_framework import PredictionMetricsFramework
 from screen_layout_s.draw_screen_helpers import DrawScreenManager
 
-from gui_benchmarking.gui_benchmarking_config import GUISimulationConfig
+from gui_benchmarking.gui_benchmarking_config import GUIBenchmarkingConfig
 
 from reports_management.integration_datasheet_metrics import IntegrationDatasheetMetrics
 from reports_management.integration_detail_metrics import IntegrationDetailMetrics
@@ -115,7 +115,7 @@ class GUIAKTabWindow(tk.Tk):
     TAB_TITLE_2 = 'Metric comparisons'
     # TAB_TITLE_3 = 'Tab 03'
 
-    def __init__(self, r_config: GUISimulationConfig, master=None):
+    def __init__(self, r_config: GUIBenchmarkingConfig, master=None):
         super().__init__(master)
         # ---------------------------
         # configuration parameters
@@ -265,9 +265,9 @@ class GUIAKTabWindow(tk.Tk):
         self.t1_weight_prediction_selector_box.grid(row=5, column=1, sticky=tk.W + tk.N)
         self.t1_weight_prediction_selector_box.current(0)
         # --------------
-        self.t1_simulation_button = tk.Button(self.t1_labelled_data_frame, text='Analyse dataset',
-                                              command=self.t1_run_simulation_experiment)
-        self.t1_simulation_button.grid(row=0, column=0, sticky=tk.W + tk.N)
+        self.t1_benchmarking_button = tk.Button(self.t1_labelled_data_frame, text='Analyse dataset',
+                                              command=self.t1_run_benchmarking_experiment)
+        self.t1_benchmarking_button.grid(row=0, column=0, sticky=tk.W + tk.N)
 
         self.t1_img_button = tk.Button(self.t1_labelled_data_frame, text='Export images', command=self.t1_run_img_experiment)
         self.t1_img_button.grid(row=0, column=1, sticky=tk.W + tk.N)
@@ -363,9 +363,9 @@ class GUIAKTabWindow(tk.Tk):
         self.t2_comparative_report_selector_box.grid(row=5, column=1, sticky=tk.W + tk.N)
         self.t2_comparative_report_selector_box.current(2)
         # -----------------------
-        self.t2_simulation_button = tk.Button(self.t2_labelled_data_frame, text='Run tests in dataset',
-                                              command=self.t2_run_simulation_experiment)
-        self.t2_simulation_button.grid(row=0, column=0, sticky=tk.W + tk.N)
+        self.t2_benchmarking_button = tk.Button(self.t2_labelled_data_frame, text='Run tests in dataset',
+                                              command=self.t2_run_benchmarking_experiment)
+        self.t2_benchmarking_button.grid(row=0, column=0, sticky=tk.W + tk.N)
 
         self.t2_quitButton = tk.Button(self.t2_labelled_data_frame, text='Quit', command=self.quit_app)
         self.t2_quitButton.grid(row=0, column=1, sticky=tk.W + tk.N)
@@ -414,11 +414,11 @@ class GUIAKTabWindow(tk.Tk):
         self.config(menu=self.menubar)  # add menu to window
 
     def open_about_data(self):
-        about_windows = AboutSimulationWindow(self)
+        about_windows = AboutBenchmarkingWindow(self)
         about_windows.grab_set()
 
     def open_help_data(self):
-        help_windows = HelpSimulationWindow(self)
+        help_windows = HelpBenchmarkingWindow(self)
         help_windows.grab_set()
 
     def not_implemented_yet(self):
@@ -512,8 +512,8 @@ class GUIAKTabWindow(tk.Tk):
             dataset_name = os.path.basename(self.t1_dataset_root_folder_path_entry.get())
             dataset_parent_folder_path = os.path.abspath(os.path.join(self.t1_dataset_root_folder_path_entry.get(), os.pardir))
             #
-            path_output_simulation = os.path.join(self.app_config.output_folder)
-            path_output_img = os.path.join(path_output_simulation, 'output_img')  # TODO: add this to global variable config
+            path_output_benchmarking = os.path.join(self.app_config.output_folder)
+            path_output_img = os.path.join(path_output_benchmarking, 'output_img')  # TODO: add this to global variable config
             # # get database
             # # get path to open manual measures
             # # ---------------------
@@ -552,7 +552,7 @@ class GUIAKTabWindow(tk.Tk):
             # ---------------------
         pass
 
-    def t1_run_simulation_experiment(self):
+    def t1_run_benchmarking_experiment(self):
         """
         Create details of measurements from each labelled object
         """
@@ -562,7 +562,7 @@ class GUIAKTabWindow(tk.Tk):
         else:
             print("proces enabled")
             print('run_img_experiment -->')
-            print('run_simulation_experiment -->')
+            print('run_benchmarking_experiment -->')
             dataset_name = os.path.basename(self.t1_dataset_root_folder_path_entry.get())
             dataset_parent_folder_path = os.path.abspath(
                 os.path.join(self.t1_dataset_root_folder_path_entry.get(), os.pardir))
@@ -675,8 +675,8 @@ class GUIAKTabWindow(tk.Tk):
             day_measures_filename_2 = datetime_experiment + 'comparative_by_day_2.csv'  # todo: add in parameters
             # todo: add additive file with results
             # todo: add ancillary columns
-            path_output_simulation = os.path.join(self.app_config.output_folder)
-            path_output_csv = os.path.join(path_output_simulation, 'output_csv')
+            path_output_benchmarking = os.path.join(self.app_config.output_folder)
+            path_output_csv = os.path.join(path_output_benchmarking, 'output_csv')
             path_day_measures = os.path.join(path_output_csv, day_measures_filename)
             # ADD HERE SPECIFIC COLUMNS to use
             manual_measures_df = pd.read_csv(self.t1_path_manual_measures_entry.get(), dtype=str, sep=';')
@@ -704,17 +704,17 @@ class GUIAKTabWindow(tk.Tk):
             # -----------------------------
             # todo: 30/03/2022, this could be improved with only one function and internal parameters
             if self.t1_roi_selector_box.get() == ROISelector.BBOX.name:
-                # start simulation with ground truth file selected by the user
+                # start benchmarking with ground truth file selected by the user
                 simulator_metrics.comparative_metrics_dataset_bbox(measures_selected_df)
             elif self.t1_roi_selector_box.get() == ROISelector.MASK.name:
-                simulator_metrics.comparative_metrics_dataset_mask(measures_selected_df)  # start simulation
+                simulator_metrics.comparative_metrics_dataset_mask(measures_selected_df)  # start benchmarking
             # -----------------------------
             simulator_metrics.export_csv_results(path_day_measures)
-            results_simulation_metrics = simulator_metrics.get_simulation_results()  # todo: this is common for comparative
-            # results_simulation_metrics.print_metrics()  # todo: measures units must be equal to report selector
-            # print(results_simulation_metrics.__str__())
-            print(results_simulation_metrics.print_metrics_02())
-            self.t1_results_info.insert("1.0", datetime_experiment + results_simulation_metrics.print_metrics_02())
+            results_benchmarking_metrics = simulator_metrics.get_benchmarking_results()  # todo: this is common for comparative
+            # results_benchmarking_metrics.print_metrics()  # todo: measures units must be equal to report selector
+            # print(results_benchmarking_metrics.__str__())
+            print(results_benchmarking_metrics.print_metrics_02())
+            self.t1_results_info.insert("1.0", datetime_experiment + results_benchmarking_metrics.print_metrics_02())
             # todo: 30/03/2022 add here option to draw apples selected
             pass
         # --------------------------------
@@ -777,14 +777,14 @@ class GUIAKTabWindow(tk.Tk):
         analyze_status_str = path_filename_selected + "\n"
         self.t2_messages_info.insert("1.0", analyze_status_str)
 
-    def t2_run_simulation_experiment(self):
+    def t2_run_benchmarking_experiment(self):
 
         if self.t2_dataset_root_folder_path_entry.get() == "" or self.t2_path_manual_measures_entry.get() == "":
             self.t2_messages_info.insert("1.0", f'Select a dataset and a groundtruth file!!!')
             self.t2_results_info.insert("1.0", "Results can't be processed")
         else:
             print("proces enabled")
-            print('run_simulation_experiment -->')
+            print('run_benchmarking_experiment -->')
             dataset_name = os.path.basename(self.t2_dataset_root_folder_path_entry.get())
             dataset_parent_folder_path = os.path.abspath(
                 os.path.join(self.t2_dataset_root_folder_path_entry.get(), os.pardir))
@@ -819,7 +819,7 @@ class GUIAKTabWindow(tk.Tk):
             now = datetime.now()
             datetime_experiment = now.strftime("%Y%m%d_%H%M%S_")
             # --------------------------------
-            path_output_simulation = os.path.join(self.app_config.output_folder)
+            path_output_benchmarking = os.path.join(self.app_config.output_folder)
             dataset_manager_config = DatasetConfig(dataset_parent_folder_path, dataset_name)
 
             # --------------------------------
@@ -827,21 +827,21 @@ class GUIAKTabWindow(tk.Tk):
             integrations_tests = IntegrationDatasheetMetrics(datetime_experiment, camera_option,
                                                              comparative_report_option, dataset_manager_config,
                                                              self.t2_path_manual_measures_entry.get(),
-                                                             path_output_simulation)
+                                                             path_output_benchmarking)
             # TODO: temporal solution 28/07/2022, WE HAVE TO ORGANIZE THIS AS AN OPTION AND IMPROVE IT.
             if self.t2_comparative_report_selector_box.get() == ComparativeMeasuresReportSelector.WEIGHT.name:
-                integrations_tests.test_run_simulation_weight()
+                integrations_tests.test_run_benchmarking_weight()
             else:
-                integrations_tests.test_run_simulation_diameters()
+                integrations_tests.test_run_benchmarking_diameters()
                 integrations_detail_tests = IntegrationDetailMetrics(datetime_experiment, camera_option,
                                                                      comparative_report_option, dataset_manager_config,
                                                                      self.t2_path_manual_measures_entry.get(),
-                                                                     path_output_simulation)
-                integrations_detail_tests.test_run_simulation_masks()
+                                                                     path_output_benchmarking)
+                integrations_detail_tests.test_run_benchmarking_masks()
             # --------------------------------
             # get details
-            # integrations_detail_tests = IntegrationDetailMetrics(datetime_experiment, camera_option, comparative_report_option, dataset_manager_config, self.path_manual_measures_entry.get(), path_output_simulation)
-            # integrations_detail_tests.test_run_simulation_masks()
+            # integrations_detail_tests = IntegrationDetailMetrics(datetime_experiment, camera_option, comparative_report_option, dataset_manager_config, self.path_manual_measures_entry.get(), path_output_benchmarking)
+            # integrations_detail_tests.test_run_benchmarking_masks()
             # --------------------------------
             pass
 

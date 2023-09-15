@@ -1,18 +1,18 @@
 """
-# Project: Size Estimation
-# Author: Juan Carlos Miranda
-# Date: February 2022
-# Description:
-  Configuration of simulation user interface
+Project: ak_sw_benchmarker Azure Kinect Size Estimation & Weight Prediction Benchmarker https://github.com/GRAP-UdL-AT/ak_sw_benchmarker/
+Author: Juan Carlos Miranda
+Date: February 2022
+Description:
+  Configuration of benchmarking user interface
 
-# Use:
+Use:
 
 """
 import os
 import configparser
 
 
-class GUISimulationConfig:
+class GUIBenchmarkingConfig:
     app_title = 'ak_sw_benchmarker'
     width = 320
     height = 480

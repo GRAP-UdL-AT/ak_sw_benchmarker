@@ -1,5 +1,5 @@
 %
-% Project: ak-size-estimation Azure Kinect Size Estimation https://github.com/juancarlosmiranda/ak_size_weight_sim/
+% Project: ak-size-estimation Azure Kinect Size Estimation & Weight Prediction Benchmarker https://github.com/GRAP-UdL-AT/ak_sw_benchmarker/
 %
 % * PAgFRUIT http://www.pagfruit.udl.cat/en/
 % * GRAP http://www.grap.udl.cat/

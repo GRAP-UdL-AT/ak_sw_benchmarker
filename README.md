@@ -1,7 +1,7 @@
-# AKFruitYield: AK_SIMULATOR - Azure Kinect Size Estimation & Weight Prediction Simulator
+# AKFruitYield: AK_SW_BENCHMARKER - Azure Kinect Size Estimation & Weight Prediction Benchmarker & Weight Prediction Simulator
 
 AKFruitYield is a modular software that allows orchard data from RGB-D Azure Kinect cameras to be processed for fruit
-size and fruit yield estimation. Specifically, two modules have been developed: i) [AK_SIMULATOR](https://github.com/GRAP-UdL-AT/ak_simulator/) that makes it possible
+size and fruit yield estimation. Specifically, two modules have been developed: i) [AK_SW_BENCHMARKER](https://github.com/GRAP-UdL-AT/ak_sw_benchmarker/) that makes it possible
 to apply different sizing algorithms and allometric yield prediction models to manually labeled color and depth tree
 images; and ii) [AK_VIDEO_ANALYSER](https://github.com/GRAP-UdL-AT/ak_video_analyser/) that analyses videos on which to automatically detect apples, estimate their size and
 predict yield at the plot or per hectare scale using the appropriate simulated algorithms. Both modules have easy-to-use
@@ -13,8 +13,8 @@ developed tools.
 
 |                           |
 |---------------------------|
-| ![SOFTWARE_FAMILY](https://github.com/GRAP-UdL-AT/ak_simulator/blob/main/docs/img/ak_fruitdata_family.png?raw=true) |
-| Fig. 1. a) Proposed stages of data acquisition and extraction for AKFruitData and AKFruitYield. Dashed green lines correspond to processes related to acquisition, red lines to processes related to data creation and training, and black lines to processes for performance estimation. b) Interoperability between the data acquisition ([AK_ACQS](https://github.com/GRAP-UdL-AT/ak_acquisition_system); [AK_SM_RECORDER](https://github.com/GRAP-UdL-AT/ak_sm_recorder)), data creation ([AK_FRAEX](https://github.com/GRAP-UdL-AT/ak_frame_extractor)), algorithm simulation ([AK_SIMULATOR](https://github.com/GRAP-UdL-AT/ak-size-estimation)) and video analysis ([AK_VIDEO_ANALYSER](https://github.com/GRAP-UdL-AT/ak_video_analyser/)) modules. The processes proposed in Figure 1 are expanded and represented by the developed software.|
+| ![SOFTWARE_FAMILY](https://github.com/GRAP-UdL-AT/ak_sw_benchmarker/blob/main/docs/img/ak_fruitdata_family.png?raw=true) |
+| Fig. 1. a) Proposed stages of data acquisition and extraction for AKFruitData and AKFruitYield. Dashed green lines correspond to processes related to acquisition, red lines to processes related to data creation and training, and black lines to processes for performance estimation. b) Interoperability between the data acquisition ([AK_ACQS](https://github.com/GRAP-UdL-AT/ak_acquisition_system); [AK_SM_RECORDER](https://github.com/GRAP-UdL-AT/ak_sm_recorder)), data creation ([AK_FRAEX](https://github.com/GRAP-UdL-AT/ak_frame_extractor)), algorithm benchmarking ([AK_SW_BENCHMARKER](https://github.com/GRAP-UdL-AT/ak-size-estimation)) and video analysis ([AK_VIDEO_ANALYSER](https://github.com/GRAP-UdL-AT/ak_video_analyser/)) modules. The processes proposed in Figure 1 are expanded and represented by the developed software.|
 
 | Package                   | Description            |
 |---------------------------|-------------------------|
@@ -26,24 +26,24 @@ developed tools.
 
 | Package                   | Description            |
 |---------------------------|-------------------------|
-| AK_SIMULATOR - Azure Kinect Size Estimation & Weight Prediction Simulator ([https://github.com/GRAP-UdL-AT/ak_simulator/](https://github.com/GRAP-UdL-AT/ak_simulator/)) | Python based GUI tool for fruit size estimation and weight prediction. |
+| ak_sw_benchmarker - Azure Kinect Size Estimation & Weight Prediction Benchmarker & Weight Prediction Simulator ([https://github.com/GRAP-UdL-AT/ak_sw_benchmarker/](https://github.com/GRAP-UdL-AT/ak_sw_benchmarker/)) | Python based GUI tool for fruit size estimation and weight prediction. |
 | AK_VIDEO_ANALYSER - Azure Kinect Video Analyser ([https://github.com/GRAP-UdL-AT/ak_video_analyser/](https://github.com/GRAP-UdL-AT/ak_video_analyser/)) | Python based GUI tool for fruit size estimation and weight prediction from videos. |
 | Table 2. | Modules developed under the AKFruitYield family |
 
 
-## AK_SIMULATOR description
+## AK_SW_BENCHMARKER description
 
 Python based GUI tool for fruit size estimation and weight prediction. It receives as input a data set in the format
 explained by [Miranda et al., 2022](https://doi.org/10.1016/j.softx.2022.101231) and a ground truth file to display
 various fruit measurements. ak-size-estimation is part of the AKFruitdata family (Fig 2.), a suite that offers field
 acquisition tools focused on the Azure Kinect DK sensor. Table 1 shows the links to the other developed tools. This is
-the Github repository of **ak-simulator**, an installable version can be found published on [Pypi.org](https://pypi.org/search/?q=ak_simulator) at the following
+the Github repository of **ak-simulator**, an installable version can be found published on [Pypi.org](https://pypi.org/search/?q=ak_sw_benchmarker) at the following
 link [https://pypi.org/project/ak-simulator/](https://pypi.org/project/ak-simulator/)
 
 |                           |
 |---------------------------|
-| ![SOFTWARE_PRESENTATION](https://github.com/GRAP-UdL-AT/ak_simulator/blob/main/docs/img/SOFTWAREX_article_04_fig_02.png?raw=true) |
-| Fig. 2. AK_SIMULATOR module user interface. a) 'Dataset metrics' tab to select data (frames) and configure the sizing and yield prediction algorithms. b) 'Metric comparisons' tab to report results and error statistics.|
+| ![SOFTWARE_PRESENTATION](https://github.com/GRAP-UdL-AT/ak_sw_benchmarker/blob/main/docs/img/SOFTWAREX_article_04_fig_02.png?raw=true) |
+| Fig. 2. ak_sw_benchmarker module user interface. a) 'Dataset metrics' tab to select data (frames) and configure the sizing and yield prediction algorithms. b) 'Metric comparisons' tab to report results and error statistics.|
 
 
 ## Contents
@@ -68,9 +68,9 @@ link [https://pypi.org/project/ak-simulator/](https://pypi.org/project/ak-simula
 ## 2. Functionalities
 
 The functionalities of the software are briefly described. Supplementary material can be
-found in [USER's Manual](https://github.com/juancarlosmiranda/ak_size_weight_sim/blob/main/docs/USER_MANUAL_ak_simulator_v1.md).
+found in [USER's Manual](https://github.com/GRAP-UdL-AT/ak_sw_benchmarker/blob/main/docs/USER_MANUAL_ak_sw_benchmarker_v1.md).
 
-* **Analyse dataset** allows simulation to be performed with a final report of size estimates and weight prediction. The user has the option of introducing a file with values of real dimensions of fruits (ground truth) to compare with the set of images that it is desired to be analyzed. A final report with results (size and weight) grouped by image and fruit will be presented according to the selected parameters in addition to the test metrics.
+* **Analyse dataset** allows benchmarking to be performed with a final report of size estimates and weight prediction. The user has the option of introducing a file with values of real dimensions of fruits (ground truth) to compare with the set of images that it is desired to be analyzed. A final report with results (size and weight) grouped by image and fruit will be presented according to the selected parameters in addition to the test metrics.
 * **Export images** makes it possible to visualize the geometric fitting of the ROIs on the objects (fruits) to be measured. Outputs are color images including binary masks of selected objects and fruit labeling. This functionality adds value to the software since the user can observe how sizing algorithms are applied to the images, enabling corrective adjustments in the algorithm configuration if necessary.
 * **Run tests in dataset** calculates the test metrics. The user must first indicate the estimate to be analyzed (Report selector in Fig. 2b), namely the major geometric axis of the fruit (A1), the minor axis (A2) or the weight (WEIGHT). Since all sizing-yielding combinations are analyzed, this functionality allows the method with least error to be determined, also obtaining a final ranking of sizing algorithms or ranking of sizing-allometric model combinations.
 
@@ -82,38 +82,38 @@ found in [USER's Manual](https://github.com/juancarlosmiranda/ak_size_weight_sim
 Create your Python virtual environment.
 
 ```
-python3 -m venv ./ak_simulator_venv
-source ./ak_simulator_venv/bin/activate
+python3 -m venv ./ak_sw_benchmarker_venv
+source ./ak_sw_benchmarker_venv/bin/activate
 pip install --upgrade pip
 
 ** for Windows 10 is python.exe -m pip install --upgrade pip **
 
 pip install python -m ak-simulator
-python -m ak_simulator
+python -m ak_sw_benchmarker
 ```
 
-Download the dataset with images and the file with apples groundtruth from [https://github.com/GRAP-UdL-AT/ak_simulator/blob/main/data/](https://github.com/GRAP-UdL-AT/ak_simulator/).
+Download the dataset with images and the file with apples groundtruth from [https://github.com/GRAP-UdL-AT/ak_sw_benchmarker/blob/main/data/](https://github.com/GRAP-UdL-AT/ak_sw_benchmarker/).
 
 
 ### 3.2 Install and run virtual environments using scripts provided
 
 * [Linux]
-  Enter to the folder **"ak_simulator/"**
+  Enter to the folder **"ak_sw_benchmarker/"**
 
 Create virtual environment(only first time)
 
 ```
-chmod 755 *.sh; ./creating_env_ak_simulator.sh
+chmod 755 *.sh; ./creating_env_ak_sw_benchmarker.sh
 ```
 
 Run script.
 
 ```
-./ak_simulator_start.sh
+./ak_sw_benchmarker_start.sh
 ```
 
 * [Windows]
-  Enter to the folder "ak_simulator/"
+  Enter to the folder "ak_sw_benchmarker/"
 
 Create virtual environment(only first time)
 
@@ -124,7 +124,7 @@ TODO_HERE
 Run script from CMD.
 
 ```
-./ak_simulator_start.bat
+./ak_sw_benchmarker_start.bat
 ```
 
 ## 4.3 Files and folder description
@@ -133,9 +133,9 @@ Folder description:
 
 | Folders                    | Description            |
 |---------------------------|-------------------------|
-| [docs/](https://github.com/GRAP-UdL-AT/ak_simulator/tree/main/docs) | Documentation |
-| [src/](https://github.com/GRAP-UdL-AT/ak_simulator/tree/main/src) | Source code |
-| [data/](https://github.com/GRAP-UdL-AT/ak_simulator/tree/main/data) | Dataset with images and the file with apples groundtruth. |
+| [docs/](https://github.com/GRAP-UdL-AT/ak_sw_benchmarker/tree/main/docs) | Documentation |
+| [src/](https://github.com/GRAP-UdL-AT/ak_sw_benchmarker/tree/main/src) | Source code |
+| [data/](https://github.com/GRAP-UdL-AT/ak_sw_benchmarker/tree/main/data) | Dataset with images and the file with apples groundtruth. |
 | . | . |
 
 Python environment files:
@@ -143,16 +143,16 @@ Python environment files:
 | Files                    | Description              | OS |
 |---------------------------|-------------------------|---|
 | activate_env.bat | Activate environments in Windows | WIN |
-| ak_simulator_start.bat | Executing main script | WIN |
-| creating_env_ak_simulator_sim.sh | Automatically creates Python environments | Linux |
-| ak_simulator_start.sh | Executing main script | Linux |
+| ak_sw_benchmarker_start.bat | Executing main script | WIN |
+| creating_env_ak_sw_benchmarker_sim.sh | Automatically creates Python environments | Linux |
+| ak_sw_benchmarker_start.sh | Executing main script | Linux |
 
 
 Pypi.org PIP packages files:
 | Files                    | Description              | OS |
 |---------------------------|-------------------------|---|
 | build_pip.bat | Build PIP package to distribution | WIN |
-| /src/ak_simulator/__main__.py | Main function used in package compilation | Supported by Python |
+| /src/ak_sw_benchmarker/__main__.py | Main function used in package compilation | Supported by Python |
 | setup.cfg | Package configuration PIP| Supported by Python |
 | pyproject.toml | Package description PIP| Supported by Python |
 
@@ -169,7 +169,7 @@ Some development tools are needed with this package, listed below:
 
 You can use the __main__.py for execute as first time in src/ak-size-estimation/_ _ main _ _.py Configure the path of
 the project, if you use Pycharm, put your folder root like this:
-![ak_simulator](https://github.com/GRAP-UdL-AT/ak_simulator/blob/main/img/configuration_pycharm.png?raw=true)
+![ak_sw_benchmarker](https://github.com/GRAP-UdL-AT/ak_sw_benchmarker/blob/main/img/configuration_pycharm.png?raw=true)
 
 ### 5.2 Creating virtual environment Windows / Linux
 
@@ -203,14 +203,14 @@ build_pip.bat
 pip install package.whl
 ```
 
-### 5.3.3 Run ak_simulator
+### 5.3.3 Run ak_sw_benchmarker
 
 ```
-python -m ak_simulator
+python -m ak_sw_benchmarker
 ```
 
 After the execution of the script, a new folder will be generated inside the project **"/dist"**. You can copy **
-ak_simulator_f/** or a compressed file **"ak_simulator_f.zip"** to distribute.
+ak_sw_benchmarker_f/** or a compressed file **"ak_sw_benchmarker_f.zip"** to distribute.
 
 ### 5.6 Package distribution format
 
@@ -231,7 +231,7 @@ If you find this code useful, please consider citing:
 
 ```
 @article{MIRANDA2022101231,
-title = {AKFruitYield: Modular simulation and video analysis software for Azure Kinect cameras for fruit size and fruit yield estimation in apple orchards},
+title = {AKFruitYield: Modular benchmarking and video analysis software for Azure Kinect cameras for fruit size and fruit yield estimation in apple orchards},
 journal = {SoftwareX},
 volume = {XX},
 pages = {000000},
@@ -240,7 +240,7 @@ issn = {0000-0000},
 doi = {},
 url = {},
 author = {Juan Carlos Miranda and Jaume Arnó and Jordi Gené-Mola and Spyros Fountas and Eduard Gregorio},
-keywords = {RGB-D camera, apple fruit sizing, yield prediction, detection and simulation algorithms, allometry},
+keywords = {RGB-D camera, apple fruit sizing, yield prediction, detection and benchmarking algorithms, allometry},
 abstract = {.}
 }
 ``` 
@@ -258,9 +258,9 @@ Agroalimentàries [(IRTA)](https://www.irta.cat/es/) for allowing the use of the
 Lordán who have contributed to the success of this work.
 
 
-<img src="https://github.com/GRAP-UdL-AT/ak_simulator/blob/main/docs/img/logos/logo_PAgFRUIT.png" height="60px" alt="PAgFRUIT Research Project"/>
-<img src="https://github.com/GRAP-UdL-AT/ak_simulator/blob/main/docs/img/logos/logo_udl.png" height="60px" alt="Universitat de Lleida"/>
-<img src="https://github.com/GRAP-UdL-AT/ak_simulator/blob/main/docs/img/logos/logo_goverment_calonia.png" height="60px" alt="Generalitat de Catalunya"/>
-<img src="https://github.com/GRAP-UdL-AT/ak_simulator/blob/main/docs/img/logos/logo_min_science.png" height="60px" alt="Ministerio de Ciencia, Innovación y Universidades"/>
-<img src="https://github.com/GRAP-UdL-AT/ak_simulator/blob/main/docs/img/logos/logo_UNIO_EUROPEA.png" height="60px" alt="Fons Social Europeu (FSE) "/>
-<img src="https://github.com/GRAP-UdL-AT/ak_simulator/blob/main/docs/img/logos/logo_AGAUR.png" height="60px" alt="AGAUR"/>
+<img src="https://github.com/GRAP-UdL-AT/ak_sw_benchmarker/blob/main/docs/img/logos/logo_PAgFRUIT.png" height="60px" alt="PAgFRUIT Research Project"/>
+<img src="https://github.com/GRAP-UdL-AT/ak_sw_benchmarker/blob/main/docs/img/logos/logo_udl.png" height="60px" alt="Universitat de Lleida"/>
+<img src="https://github.com/GRAP-UdL-AT/ak_sw_benchmarker/blob/main/docs/img/logos/logo_goverment_calonia.png" height="60px" alt="Generalitat de Catalunya"/>
+<img src="https://github.com/GRAP-UdL-AT/ak_sw_benchmarker/blob/main/docs/img/logos/logo_min_science.png" height="60px" alt="Ministerio de Ciencia, Innovación y Universidades"/>
+<img src="https://github.com/GRAP-UdL-AT/ak_sw_benchmarker/blob/main/docs/img/logos/logo_UNIO_EUROPEA.png" height="60px" alt="Fons Social Europeu (FSE) "/>
+<img src="https://github.com/GRAP-UdL-AT/ak_sw_benchmarker/blob/main/docs/img/logos/logo_AGAUR.png" height="60px" alt="AGAUR"/>

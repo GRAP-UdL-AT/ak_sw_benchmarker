@@ -1,5 +1,5 @@
 """
-Project: ak-video-analyser Azure Kinect Video Analyser
+Project: ak_sw_benchmarker Azure Kinect Size Estimation & Weight Prediction Benchmarker https://github.com/GRAP-UdL-AT/ak_sw_benchmarker/
 Github repository: https://github.com/juancarlosmiranda/ak_video_analyser
 
 Author: Juan Carlos Miranda
@@ -15,10 +15,10 @@ Use:
 import os
 import tkinter as tk
 import webbrowser
-from gui_benchmarking.gui_benchmarking_config import GUISimulationConfig
+from gui_benchmarking.gui_benchmarking_config import GUIBenchmarkingConfig
 
 
-class HelpSimulationWindow(tk.Toplevel):
+class HelpBenchmarkingWindow(tk.Toplevel):
     author_str = 'Juan Carlos Miranda'
     author_site_str = 'https://github.com/juancarlosmiranda'
     title_str = 'Azure Kinect Size Estimation & \n Weight Prediction Benchmarker \n(ak_sw_benchmarker)'
@@ -27,7 +27,7 @@ class HelpSimulationWindow(tk.Toplevel):
 
     def __init__(self, parent):
         super().__init__(parent)
-        self.geometry(GUISimulationConfig.geometry_about)
+        self.geometry(GUIBenchmarkingConfig.geometry_about)
         self.title('Help...')
         self.resizable(width=False, height=False)  # do not change the size
         self.attributes('-topmost', True)
@@ -51,7 +51,7 @@ class HelpSimulationWindow(tk.Toplevel):
         link = tk.Label(self, text="User manual here", font=('Helveticabold', 15), fg="blue", cursor="hand2")
         link.pack()
         link.bind("<Button-1>", lambda e:
-        self.callback("https://github.com/GRAP-UdL-AT/ak_sm_benchmarker/"))
+        self.callback("https://github.com/GRAP-UdL-AT/ak_sw_benchmarker//"))
 
         buttonClose = tk.Button(self, text='Close', command=self.destroy)
         buttonClose.pack(expand=True)

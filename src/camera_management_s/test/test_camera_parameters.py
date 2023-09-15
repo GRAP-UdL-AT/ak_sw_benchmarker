@@ -1,14 +1,14 @@
 """
-# Project: Fruit Size Estimation
-# Author: Juan Carlos Miranda
-# Date: January 2022
-# Description:
+Project: ak_sw_benchmarker Azure Kinect Size Estimation & Weight Prediction Benchmarker https://github.com/GRAP-UdL-AT/ak_sw_benchmarker/
+Author: Juan Carlos Miranda
+Date: January 2022
+Description:
   Test for methods used for size estimation of fruits
-#todo: header
+
 Documentation in https://docs.python.org/3/library/unittest.html
 
 Usage:
-python -m unittest $HOME/development/KA_detector/mass_estimation/test/test_size_estimation.py
+python -m unittest $HOME/development/ak_sw_benchmarker/data_features_processor/test/test_size_estimation.py
 """
 import unittest
 from camera_management_s.camera_parameters import CameraParameters

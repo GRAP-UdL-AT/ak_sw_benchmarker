@@ -1,5 +1,5 @@
 """
-Project: ak_sw_benchmarker Azure Kinect Size Estimation https://github.com/juancarlosmiranda/ak_size_weight_sim/
+Project: ak_sw_benchmarker Azure Kinect Size Estimation & Weight Prediction Benchmarker https://github.com/GRAP-UdL-AT/ak_sw_benchmarker/
 
 * PAgFRUIT http://www.pagfruit.udl.cat/en/
 * GRAP http://www.grap.udl.cat/
@@ -14,7 +14,7 @@ Use:
 import os
 from os.path import expanduser
 from helpers.helper_filesystem import copy_folder
-from gui_benchmarking.gui_benchmarking_config import GUISimulationConfig
+from gui_benchmarking.gui_benchmarking_config import GUIBenchmarkingConfig
 from gui_benchmarking.gui_tab_window import GUIAKTabWindow
 # without src.
 
@@ -58,10 +58,10 @@ if __name__ == '__main__':
         os.mkdir(path_user_output_img_folder)
         pass
     # -------------------------
-    ui_simulation_config = GUISimulationConfig(ui_path_config_file)
-    ui_simulation_config.input_folder = path_user_input_folder
-    ui_simulation_config.output_folder = path_user_output_folder
+    ui_benchmarking_config = GUIBenchmarkingConfig(ui_path_config_file)
+    ui_benchmarking_config.input_folder = path_user_input_folder
+    ui_benchmarking_config.output_folder = path_user_output_folder
     # -------------------------
-    app = GUIAKTabWindow(ui_simulation_config)
+    app = GUIAKTabWindow(ui_benchmarking_config)
     app.mainloop()
     # -------------------------
