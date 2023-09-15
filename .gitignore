@@ -2,3 +2,4 @@
 .idea/ak_size_weight_sim.iml
 .idea/inspectionProfiles/profiles_settings.xml
 .idea/inspectionProfiles/Project_Default.xml
+*.pyc
