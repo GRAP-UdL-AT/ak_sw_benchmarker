@@ -1,6 +1,6 @@
 @echo off
 REM HEADER FOR WINDOW SYSTEMS
-REM Project: ak_simulator Azure Kinect Size Estimation & Weight Prediction Benchmarker https://github.com/GRAP-UdL-AT/ak_sw_benchmarker/
+REM Project: ak_sw_benchmarker Azure Kinect Size Estimation & Weight Prediction Benchmarker https://github.com/GRAP-UdL-AT/ak_sw_benchmarker/
 REM
 REM  * PAgFRUIT http://www.pagfruit.udl.cat/en/
 REM  * GRAP http://www.grap.udl.cat/

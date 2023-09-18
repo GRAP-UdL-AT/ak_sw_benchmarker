@@ -1,4 +1,7 @@
-https://test.pypi.org/project/ak-simulator/
+Official site
+----------------------
+https://test.pypi.org/project/ak-sw-benchmarker/
+https://pypi.org/project/ak-sw-benchmarker
 
 
 Environment creation
@@ -9,23 +12,24 @@ pip install --upgrade pip
 Testing package
 ---------------------
 twine upload --repository testpypi ./dist/*
-pip install -i https://test.pypi.org/simple/ ak-simulator
+pip install --index-url https://test.pypi.org/simple/ --extra-index-url https://pypi.org/simple ak-sw-benchmarker
+pip install -i https://test.pypi.org/simple/ ak-sw-benchmarker
 
 
 Final repository
 ---------------------
 twine upload ./dist/* --verbose
-pip install ak-simulator
+pip install ak-sw-benchmarker
 
 
 Local installation
 ------------------
-pip install ak_simulator-0.0.7-py3-none-any.whl
-pip install ak_simulator-0.0.7-py3-none-any.whl --force-reinstall
+pip install ak_sw_benchmarker-0.0.9-py3-none-any.whl
+pip install ak_sw_benchmarker-0.0.9-py3-none-any.whl --force-reinstall
 
 Execution
 ------------------
-python -m ak_simulator
+python -m ak_sw_benchmarker
 
 
 Installation in virtual machine
@@ -45,5 +49,4 @@ Problems with dependences
 https://stackoverflow.com/questions/57405014/how-to-fix-no-matching-distribution-found-for-package-name-when-installing-o
 https://packaging.python.org/en/latest/guides/using-testpypi/
 
-
-pip install --index-url https://test.pypi.org/simple/ --extra-index-url https://pypi.org/simple ak_simulator
+pip install ak-sw-benchmarker

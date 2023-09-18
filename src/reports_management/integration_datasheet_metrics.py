@@ -73,7 +73,7 @@ class IntegrationDatasheetMetrics:
         self.weight_prediction_option = WeightPredictionModelSelector.NONE # None  # MassEstimationModelSelector.D1D2_LM_MET_01
         # --------------------------------------
         self.data_features_options = None
-        self.simulator_config = None
+        self.benchmarking_config = None
 
         pass
 
@@ -85,14 +85,14 @@ class IntegrationDatasheetMetrics:
                                                        depth_selector=self.depth_option,
                                                        weight_selector=self.weight_prediction_option)
         # ----------------------
-        self.simulator_config = PredictionsMetricsFrameworkConfig(self.dataset_manager_config,
-                                                                  self.path_day_measures,
-                                                                  self.data_features_options,
-                                                                  self.weight_prediction_option,
-                                                                  self.comparative_report_option)
+        self.benchmarking_config = PredictionsMetricsFrameworkConfig(self.dataset_manager_config,
+                                                                     self.path_day_measures,
+                                                                     self.data_features_options,
+                                                                     self.weight_prediction_option,
+                                                                     self.comparative_report_option)
 
         # -----------------------------
-        benchmarking = PredictionMetricsFramework(self.simulator_config)
+        benchmarking = PredictionMetricsFramework(self.benchmarking_config)
         # -----------------------------
         if self.roi_selector.name == ROISelector.BBOX.name:
             benchmarking.comparative_metrics_dataset_bbox(self.measures_selected_df)

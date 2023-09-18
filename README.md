@@ -4,7 +4,7 @@ AKFruitYield is a modular software that allows orchard data from RGB-D Azure Kin
 size and fruit yield estimation. Specifically, two modules have been developed: i) [AK_SW_BENCHMARKER](https://github.com/GRAP-UdL-AT/ak_sw_benchmarker/) that makes it possible
 to apply different sizing algorithms and allometric yield prediction models to manually labeled color and depth tree
 images; and ii) [AK_VIDEO_ANALYSER](https://github.com/GRAP-UdL-AT/ak_video_analyser/) that analyses videos on which to automatically detect apples, estimate their size and
-predict yield at the plot or per hectare scale using the appropriate simulated algorithms. Both modules have easy-to-use
+predict yield at the plot or per hectare scale using the appropriate algorithms. Both modules have easy-to-use
 graphical interfaces and provide reports that can subsequently be used by other analysis tools.
 
 [AK_VIDEO_ANALYSER](https://pypi.org/project/ak-video-analyser/) is part of the [AKFruitData](https://doi.org/10.1016/j.softx.2022.101231) and AKFruitYield family (Fig 1.), a suite
@@ -37,8 +37,8 @@ Python based GUI tool for fruit size estimation and weight prediction. It receiv
 explained by [Miranda et al., 2022](https://doi.org/10.1016/j.softx.2022.101231) and a ground truth file to display
 various fruit measurements. ak-sw-benchmarker is part of the AKFruitYield family (Fig 2.), a suite that offers field
 acquisition tools focused on the Azure Kinect DK sensor. Table 1 shows the links to the other developed tools. This is
-the Github repository of **ak-simulator**, an installable version can be found published on [Pypi.org](https://pypi.org/search/?q=ak_sw_benchmarker) at the following
-link [https://pypi.org/project/ak-simulator/](https://pypi.org/project/ak-simulator/)
+the Github repository of **ak-sw-benchmarker**, an installable version can be found published on [Pypi.org](https://pypi.org/search/?q=ak-sw-benchmarker) at the following
+link [https://pypi.org/project/ak-sw-benchmarker/](https://pypi.org/project/ak-sw-benchmarker/)
 
 |                           |
 |---------------------------|
@@ -82,14 +82,24 @@ found in [USER's Manual](https://github.com/GRAP-UdL-AT/ak_sw_benchmarker/blob/m
 Create your Python virtual environment.
 
 ```
+** For Linux systems **
 python3 -m venv ./ak_sw_benchmarker_venv
 source ./ak_sw_benchmarker_venv/bin/activate
 pip install --upgrade pip
+pip install python -m ak_sw_benchmarker
 
-** for Windows 10 is python.exe -m pip install --upgrade pip **
-
-pip install python -m ak-simulator
+** execute package **
 python -m ak_sw_benchmarker
+
+** For Windows 10 systems **
+python -m venv ./ak_sw_benchmarker_venv
+.\ak_sw_benchmarker_venv\Scripts\activate.bat
+python.exe -m pip install --upgrade pip
+pip install ak-sw-benchmarker
+
+** execute package **
+python -m ak_sw_benchmarker
+
 ```
 
 Download the dataset with images and the file with apples groundtruth from [https://github.com/GRAP-UdL-AT/ak_sw_benchmarker/blob/main/data/](https://github.com/GRAP-UdL-AT/ak_sw_benchmarker/).

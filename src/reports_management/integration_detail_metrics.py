@@ -525,24 +525,24 @@ class IntegrationDetailMetrics:
                                                   depth_selector=self.depth_option,
                                                   weight_selector=self.weight_prediction_option)
         # -----------------------------
-        self.simulator_config = PredictionsMetricsFrameworkConfig(self.dataset_manager_config,
-                                                                  self.path_day_measures,
-                                                                  data_features_options,
-                                                                  self.weight_prediction_option,
-                                                                  self.comparative_report_option)
+        self.benchmarker_config = PredictionsMetricsFrameworkConfig(self.dataset_manager_config,
+                                                                    self.path_day_measures,
+                                                                    data_features_options,
+                                                                    self.weight_prediction_option,
+                                                                    self.comparative_report_option)
         # -----------------------------
-        simulator_metrics = PredictionMetricsFramework(self.simulator_config)
+        benchmarker_metrics = PredictionMetricsFramework(self.benchmarker_config)
         # -----------------------------
         if self.roi_selector.name == ROISelector.BBOX.name:
-            simulator_metrics.comparative_metrics_dataset_bbox(self.measures_selected_df)
+            benchmarker_metrics.comparative_metrics_dataset_bbox(self.measures_selected_df)
         elif self.roi_selector.name == ROISelector.MASK.name:
-            simulator_metrics.comparative_metrics_dataset_mask(self.measures_selected_df)
+            benchmarker_metrics.comparative_metrics_dataset_mask(self.measures_selected_df)
         # -----------------------------
-        results_benchmarking_metrics = simulator_metrics.get_benchmarking_results()
+        results_benchmarking_metrics = benchmarker_metrics.get_benchmarking_results()
         print(
             f'{self.camera_option.__name__()}, {self.comparative_report_option.name},{self.roi_selector.name}, {self.size_estimation_selector.name}')
         results_benchmarking_metrics.print_metrics()
-        simulator_metrics.export_csv_results(self.path_day_measures)
+        benchmarker_metrics.export_csv_results(self.path_day_measures)
 
     def test_run_benchmarking_masks(self):
         """

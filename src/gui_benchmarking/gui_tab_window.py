@@ -697,20 +697,20 @@ class GUIAKTabWindow(tk.Tk):
                                                       depth_selector=depth_option,
                                                       weight_selector=weight_prediction_option)
 
-            simulator_config = PredictionsMetricsFrameworkConfig(dataset_manager_config, path_day_measures,
+            benchmarker_config = PredictionsMetricsFrameworkConfig(dataset_manager_config, path_day_measures,
                                                                  data_features_options, weight_prediction_option,
                                                                  comparative_report_option)
-            simulator_metrics = PredictionMetricsFramework(simulator_config)
+            benchmarker_metrics = PredictionMetricsFramework(benchmarker_config)
             # -----------------------------
             # todo: 30/03/2022, this could be improved with only one function and internal parameters
             if self.t1_roi_selector_box.get() == ROISelector.BBOX.name:
                 # start benchmarking with ground truth file selected by the user
-                simulator_metrics.comparative_metrics_dataset_bbox(measures_selected_df)
+                benchmarker_metrics.comparative_metrics_dataset_bbox(measures_selected_df)
             elif self.t1_roi_selector_box.get() == ROISelector.MASK.name:
-                simulator_metrics.comparative_metrics_dataset_mask(measures_selected_df)  # start benchmarking
+                benchmarker_metrics.comparative_metrics_dataset_mask(measures_selected_df)  # start benchmarking
             # -----------------------------
-            simulator_metrics.export_csv_results(path_day_measures)
-            results_benchmarking_metrics = simulator_metrics.get_benchmarking_results()  # todo: this is common for comparative
+            benchmarker_metrics.export_csv_results(path_day_measures)
+            results_benchmarking_metrics = benchmarker_metrics.get_benchmarking_results()  # todo: this is common for comparative
             # results_benchmarking_metrics.print_metrics()  # todo: measures units must be equal to report selector
             # print(results_benchmarking_metrics.__str__())
             print(results_benchmarking_metrics.print_metrics_02())
