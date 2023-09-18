@@ -42,7 +42,7 @@ link [https://pypi.org/project/ak-sw-benchmarker/](https://pypi.org/project/ak-s
 
 |                           |
 |---------------------------|
-| ![SOFTWARE_PRESENTATION](https://github.com/GRAP-UdL-AT/ak_sw_benchmarker/blob/main/docs/img/SOFTWAREX_article_04_fig_02.png?raw=true) |
+| ![SOFTWARE_PRESENTATION](https://github.com/GRAP-UdL-AT/ak_sw_benchmarker/blob/main/docs/img/SOFTWAREX_article_04_fig_02_v1.1.png?raw=true) |
 | Fig. 2. ak_sw_benchmarker module user interface. a) 'Dataset metrics' tab to select data (frames) and configure the sizing and yield prediction algorithms. b) 'Metric comparisons' tab to report results and error statistics.|
 
 
