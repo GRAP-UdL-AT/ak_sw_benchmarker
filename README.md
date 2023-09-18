@@ -13,7 +13,7 @@ developed tools.
 
 |                           |
 |---------------------------|
-| ![SOFTWARE_FAMILY](https://github.com/GRAP-UdL-AT/ak_sw_benchmarker/blob/main/docs/img/ak_fruitdata_family.png?raw=true) |
+| ![SOFTWARE_FAMILY](https://github.com/GRAP-UdL-AT/ak_sw_benchmarker/blob/main/docs/img/ak_fruit_family.png?raw=true) |
 | Fig. 1. a) Proposed stages of data acquisition and extraction for AKFruitData and AKFruitYield. Dashed green lines correspond to processes related to acquisition, red lines to processes related to data creation and training, and black lines to processes for performance estimation. b) Interoperability between the data acquisition ([AK_ACQS](https://github.com/GRAP-UdL-AT/ak_acquisition_system); [AK_SM_RECORDER](https://github.com/GRAP-UdL-AT/ak_sm_recorder)), data creation ([AK_FRAEX](https://github.com/GRAP-UdL-AT/ak_frame_extractor)), algorithm benchmarking ([AK_SW_BENCHMARKER](https://github.com/GRAP-UdL-AT/ak-size-estimation)) and video analysis ([AK_VIDEO_ANALYSER](https://github.com/GRAP-UdL-AT/ak_video_analyser/)) modules. The processes proposed in Figure 1 are expanded and represented by the developed software.|
 
 | Package                   | Description            |
