@@ -24,7 +24,7 @@ developed tools.
 |                           |                           |                         |
 | ![AK_SW_BENCHMARKER_100](https://github.com/juancarlosmiranda/juancarlosmiranda/blob/main/images/icons_992/ak_sw_benchmarker_992.png?raw=true) | AK_SW_BENCHMARKER - Azure Kinect Size Estimation & Weight Prediction Benchmarker ([https://pypi.org/project/ak-sw-benchmarker/](https://pypi.org/project/ak-sw-benchmarker/)) | Python based GUI tool for fruit size estimation and weight prediction. |
 | ![AK_VIDEO_ANALYSER_100](https://github.com/juancarlosmiranda/juancarlosmiranda/blob/main/images/icons_992/ak_video_analyser_992.png?raw=true) | AK_VIDEO_ANALYSER - Azure Kinect Video Analyser ([https://pypi.org/project/ak-video-analyser/](https://pypi.org/project/ak-video-analyser/)) | Python based GUI tool for fruit size estimation and weight prediction from videos. |
-|                           | Table 1. | Modules developed under the [AKFruitData](https://doi.org/10.1016/j.softx.2022.101231) AKFruitYield family |
+| Table 1.                  |                           | Modules developed under the [AKFruitData](https://doi.org/10.1016/j.softx.2022.101231) and AKFruitYield family |
 
 
 
