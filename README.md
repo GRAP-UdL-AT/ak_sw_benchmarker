@@ -22,10 +22,12 @@ developed tools.
 | ![AK_SM_RECORDER_100](https://github.com/juancarlosmiranda/juancarlosmiranda/blob/main/images/icons_992/ak_sm_recorder_992.png?raw=true) | AK_SM_RECORDER - Azure Kinect Standalone Mode ([https://pypi.org/project/ak-sm-recorder/](https://pypi.org/project/ak-sm-recorder/)) | A simple GUI recorder based on Python to manage Azure Kinect camera devices in a standalone mode. https://pypi.org/project/ak-sm-recorder/ |
 | ![AK_FRAEX_100](https://github.com/juancarlosmiranda/juancarlosmiranda/blob/main/images/icons_992/ak_fraex_992.png?raw=true) | AK_FRAEX - Azure Kinect Frame Extractor ([https://pypi.org/project/ak-frame-extractor/](https://pypi.org/project/ak-frame-extractor/)) | AK_FRAEX is a desktop tool created for post-processing tasks after field acquisition. It enables the extraction of information from videos recorded in MKV format with the Azure Kinect camera. Through a GUI, the user can configure initial parameters to extract frames and automatically create the necessary metadata for a set of images. |
 |                           |                           |                         |
+|                           | Table 1. | Modules developed under the [AKFruitData](https://doi.org/10.1016/j.softx.2022.101231) family |
+|                           | Package                   | Description            |
 | ![AK_SW_BENCHMARKER_100](https://github.com/juancarlosmiranda/juancarlosmiranda/blob/main/images/icons_992/ak_sw_benchmarker_992.png?raw=true) | AK_SW_BENCHMARKER - Azure Kinect Size Estimation & Weight Prediction Benchmarker ([https://pypi.org/project/ak-sw-benchmarker/](https://pypi.org/project/ak-sw-benchmarker/)) | Python based GUI tool for fruit size estimation and weight prediction. |
 | ![AK_VIDEO_ANALYSER_100](https://github.com/juancarlosmiranda/juancarlosmiranda/blob/main/images/icons_992/ak_video_analyser_992.png?raw=true) | AK_VIDEO_ANALYSER - Azure Kinect Video Analyser ([https://pypi.org/project/ak-video-analyser/](https://pypi.org/project/ak-video-analyser/)) | Python based GUI tool for fruit size estimation and weight prediction from videos. |
 |                           | Table 1. | Modules developed under the [AKFruitData](https://doi.org/10.1016/j.softx.2022.101231) family |
-
+|                           | Table 2. | Modules developed under the AKFruitYield family |
 
 |                           | Package                   | Description             |
 |---------------------------|---------------------------|-------------------------|
